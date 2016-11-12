@@ -70,6 +70,8 @@
 		D49FCCF81DD7D11F00ADA57D /* ConversationApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCEC1DD7C81300ADA57D /* ConversationApi.h */; };
 		D49FCCF91DD7D12200ADA57D /* ConversationApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCED1DD7C81300ADA57D /* ConversationApi.m */; };
 		D49FCCFC1DD7D21800ADA57D /* Messenger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6894370D6B79441C97A1012690D688F9 /* Messenger.storyboard */; };
+		D49FCD011DD7DCA300ADA57D /* ConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCFE1DD7DCA000ADA57D /* ConversationCell.m */; };
+		D49FCD021DD7DCA900ADA57D /* ConversationCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCFD1DD7DCA000ADA57D /* ConversationCell.h */; };
 		D65865C21F7F118FD65704B9D62D94BE /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F87B39AA3969495DC69A7AAF7D40E8 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D94816A920C74C24BF9F49626CC69F67 /* ORBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63AFF83FE3CF0DB942440C20356F9EB /* ORBTViewController.m */; };
 		DB5D9F4D439E72DB6BD6359160CDEF3C /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C711F2F162049BDCC740B3AF11C79B2A /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -182,6 +184,8 @@
 		D49FCCED1DD7C81300ADA57D /* ConversationApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationApi.m; sourceTree = "<group>"; };
 		D49FCCF11DD7CA5200ADA57D /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conversation.h; path = Models/Conversation.h; sourceTree = "<group>"; };
 		D49FCCF21DD7CA5200ADA57D /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conversation.m; path = Models/Conversation.m; sourceTree = "<group>"; };
+		D49FCCFD1DD7DCA000ADA57D /* ConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationCell.h; sourceTree = "<group>"; };
+		D49FCCFE1DD7DCA000ADA57D /* ConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationCell.m; sourceTree = "<group>"; };
 		D4B4F9AEBEF42A70D385D07BC03E6B34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5346FE703EEDDA7C2DB264257984C41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D63AFF83FE3CF0DB942440C20356F9EB /* ORBTViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ORBTViewController.m; sourceTree = "<group>"; };
@@ -302,6 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				6894370D6B79441C97A1012690D688F9 /* Messenger.storyboard */,
+				D49FCCFD1DD7DCA000ADA57D /* ConversationCell.h */,
+				D49FCCFE1DD7DCA000ADA57D /* ConversationCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -555,6 +561,7 @@
 				D49FCCF71DD7D11A00ADA57D /* HTTPPaths.h in Headers */,
 				10DD0C63C573E23DE9535D463B1D22FB /* Orbt.io-umbrella.h in Headers */,
 				1B1C5FAAF0BA89B30943E0B52F32D1EA /* ORBTClient.h in Headers */,
+				D49FCD021DD7DCA900ADA57D /* ConversationCell.h in Headers */,
 				D49FCCF81DD7D11F00ADA57D /* ConversationApi.h in Headers */,
 				A3623F1CA37B1A594301E0AEBC48900D /* ORBTInboxViewController.h in Headers */,
 				5CFDAA9264652C1AAE048473151E91CA /* ORBTViewController.h in Headers */,
@@ -726,6 +733,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49FCD011DD7DCA300ADA57D /* ConversationCell.m in Sources */,
 				6E6D9D58061E7323352F176195B72FE6 /* HTTPManager.m in Sources */,
 				D49FCCF91DD7D12200ADA57D /* ConversationApi.m in Sources */,
 				E1802E17E42286E768F83C2B2CBFD001 /* Orbt.io-dummy.m in Sources */,

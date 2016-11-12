@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ORBTInboxViewController : UIViewController
+@interface ORBTInboxViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @end
