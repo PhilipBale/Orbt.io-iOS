@@ -14,6 +14,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [ORBTClient setAppId:@"58277dfa2714b5342634d011"];
+    [ORBTClient connectWithUUID:@"test@test.com" identityToken:@"test" completion:^(BOOL success) {
+        NSLog(@"Connected");
+    }];
     // Override point for customization after application launch.
     return YES;
 }

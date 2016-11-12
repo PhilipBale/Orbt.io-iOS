@@ -7,6 +7,7 @@
 //
 
 #import "ORBTClient.h"
+#import "HTTPManager.h"
 
 @interface ORBTClient ()
 
@@ -40,7 +41,10 @@
 
 + (void)connectWithUUID:(NSString *)uuid identityToken:(NSString *)token completion:(void (^)(BOOL))completion
 {
+    NSLog(@"[ORBTClient] Connecting to ORBT backend");
+    [HTTPManager setRequestHeadersForAppId:[[self sharedClient] appId] uuid:uuid identityToken:token];
     
+    if (completion) completion(NO);
 }
 
 @end

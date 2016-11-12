@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		06F7E733F7189B0A9BB2E6658E62E2B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A70021CC6BB93F3180DFA142F3A96E /* CoreGraphics.framework */; };
 		07CCA2377CCFDD58EB8F0738D9D88917 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853C3C9993FB94B5AE7D2D3F5DE6B43 /* AFHTTPRequestOperationManager.m */; };
-		082BA6CEB93D6DF79475FB5A9182316C /* ORBTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A31C0699A0C4E6079DD7B2148B39C /* ORBTClient.m */; };
 		0C1869A00421DFBA1C82AF772E2F13BE /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CE0EE14B3BCF57B1EC214EF8A2E17E /* AFNetworking-dummy.m */; };
 		0DD519176F5025EA203D9DD53C7456C3 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DED479CEA29303B17893955733E2B1 /* AFNetworkReachabilityManager.m */; };
 		0F433A80193ACD16AF746D01A22EE0C1 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DF0EB616D768E0EA085A8F41BB7F89E /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10DD0C63C573E23DE9535D463B1D22FB /* Orbt.io-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28902560353F6E0500246D181E9596E8 /* Orbt.io-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B1C5FAAF0BA89B30943E0B52F32D1EA /* ORBTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = BCEAAE711CF3B952BDCFAE201C94DCE6 /* ORBTClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D974D4F7BB49961BF96F2A9084B4812 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B78CCF0B6DB81F206EB338F172DAFA51 /* UIImageView+AFNetworking.m */; };
+		1DC02821CF534B4250B062CF43DC346E /* HTTPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 749A4980AE298AF0B03AAB5FF5E6B167 /* HTTPManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		20502B2E4CDB5A745DB64A70EF5E82D3 /* Pods-Orbt.io_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1021951EF50C52928EDD9CDF3C7DAC27 /* Pods-Orbt.io_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23F62266558CF7EA25B7AE2C7E75E67F /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCDB686F306937C504651ECBF7C24D6 /* UIAlertView+AFNetworking.m */; };
 		25E58152597C474DC6A3F6C5CA90CADE /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DC67FFD3D275F4DF82652F3312F816 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,7 +23,6 @@
 		2ED997B259CF87164EB742D3C6E3C670 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3935F527C2D693E1106793B5D7C31FAD /* AFURLResponseSerialization.m */; };
 		300F34DBD1EAD72F220D42721638201C /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC796A6EF07A12A3C1B2C473A6C4743 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30C9EA5115588077855C0FE5EDEB6D04 /* Pods-Orbt.io_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 352888BF3EA1014B6EBDC58B0645FDC7 /* Pods-Orbt.io_Tests-dummy.m */; };
-		36E41746FEB77C84E9691C12CC295F0D /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5461D992F0D803F0F05DF72B2849301D /* AFNetworking.framework */; };
 		37700BB8D4FF2ABDB00FAEF1B539C440 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E76012BE19B2261B02D7B817AE3DECF7 /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3998F3080D6EE6E6A3D3700424730886 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C358947BFE35B88AEB42B0947FD6464 /* AFHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40AC18DE3F1347B523458E72F8F4139C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D39D513DA3519FA56B3F9657B9F9990 /* Security.framework */; };
@@ -32,7 +33,10 @@
 		5286E996186A50899A9B6E300D65015B /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 662F2B693F4836F935DF7B3734AABDE6 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54A93A8656A260977A67B4682BCBA26F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A695098C79A11A48EE128D40755A9C /* AFHTTPRequestOperation.m */; };
 		59B5809E8E97F19BCDF9B18278740A6B /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A151745DED7D09C365E2699BA154940D /* UIActivityIndicatorView+AFNetworking.m */; };
+		5CFDAA9264652C1AAE048473151E91CA /* ORBTViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A62F036C3DE300222D62A6C9743A488 /* ORBTViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D8FA23F6E9D44E8BAA32E44CD48246D /* ORBTInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD3012FA87E22DB8011533497C079B7 /* ORBTInboxViewController.m */; };
 		5F4ADB57CEB7A57AC58F1E6AAD42A72A /* UIAlertView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C181592B691B103939A6DAF8AFFEA65A /* UIAlertView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E6D9D58061E7323352F176195B72FE6 /* HTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61079765CD93EA891D2E8CEFEB570F83 /* HTTPManager.m */; };
 		6F9313FED3763C57F6EC60B6175CDD25 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F710B9B751F58727F33992641D5ADAD7 /* UIWebView+AFNetworking.m */; };
 		6FC4B7B0F5119FBBD5120C275A72F9B3 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3963381BDC1AA7CE8B2C505AC9C17FDF /* AFSecurityPolicy.m */; };
 		746A7549981ED63CB70FF730EF60999D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADAF03A765A3FCAC6E0673E44664E07 /* MobileCoreServices.framework */; };
@@ -44,31 +48,33 @@
 		85DD1BC2688D2CC2DACFB1279B2E8BE4 /* Pods-Orbt.io_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E19995D5BF415D6687FD69D70D7215 /* Pods-Orbt.io_Example-dummy.m */; };
 		8634FF44ABEFF40B5D561593B24C9B1E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A9F5CEBB28B52D2BC77AB22F4B37D4 /* AFURLSessionManager.m */; };
 		86A4516B3CE647E633349AC05226C207 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CE62259319F6CD331B029EF7A82654 /* AFHTTPRequestOperationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		926A3418FA8B86EA9C1E5BB1ADD79ACE /* ORBTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B81AA037AEC700BCFF30B05E315C48F6 /* ORBTClient.m */; };
 		928D0E04335B82340005F85E6B6FF1E8 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FDCA45562D02A8AB196E1718874625 /* UIProgressView+AFNetworking.m */; };
 		9323AE442E8479F9299A1235B6F87DC8 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 457AC41409DB67741790BD03BFA7D354 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95B31D9D71F9E540216811163394F255 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EADA5DB8B89A20DC28B3320B41F8570 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		963586B4B03E92F4F279896E3B2B319D /* Orbt.io-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FBF42A000157E943E9152D7F2C6DE0 /* Orbt.io-dummy.m */; };
 		964BFEA9E3E84571F866D24102FEA675 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 114AFB315A676864A107425F120976A8 /* AFURLRequestSerialization.m */; };
 		A1D737D6D3D781E98ABFEC6EE0C095EB /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E22A45AF58559421975884FCB04C98C /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA5F6831C3730EB3E487E4C7677EF0F6 /* ORBTViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 58ECF57B52F0E36070597DC303350171 /* ORBTViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3623F1CA37B1A594301E0AEBC48900D /* ORBTInboxViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CCC1C06EEAC57B386D9EE697885C8D7 /* ORBTInboxViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB7A01AFF6D26318C29CB0F7D3D3DEFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159245C1D8294EF16CB016833D763E42 /* Foundation.framework */; };
 		B2C535FEBEE83B3ED5EA78CB848A964B /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 55955BC3DD5E5A8B34E0FE76BA01651F /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5D4EBCD83C85BF560908DC73AFCC97A /* AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D5E80BB7AD3CDF3B4215CF698ECA501 /* AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8AD1AD95EE2B34AD129A2CF3488FCB5 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5461D992F0D803F0F05DF72B2849301D /* AFNetworking.framework */; };
 		B8E64C71559B3F4120760CA40C78A8A8 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CD830C93513B12193D93249388C9465 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5C3434FB7FB0533A136199F94877CEC /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E7D6563A537614F07218B6756E64FE /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C60714C11ADDB1F1220DC794451931CA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACFBA88A948B1EF6BFCF0A626F54EF1 /* SystemConfiguration.framework */; };
 		C8EA7B27FCA8377BE686BE03C73E3889 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A363D19C9F8FF2723FBF1B2AE6F4A68E /* UIRefreshControl+AFNetworking.m */; };
-		CC35EA2DBAA4F25FE547EE0D405C374F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159245C1D8294EF16CB016833D763E42 /* Foundation.framework */; };
 		CF0E8D70D0E6ECB756F7029AE0842E17 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4004CB328D9B73234395795631AF675A /* AFNetworkActivityIndicatorManager.m */; };
-		D49FCCE31DD7BFBF00ADA57D /* HTTPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCDC1DD7BFBF00ADA57D /* HTTPManager.h */; };
-		D49FCCE41DD7BFBF00ADA57D /* HTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCDD1DD7BFBF00ADA57D /* HTTPManager.m */; };
-		D49FCCE51DD7BFBF00ADA57D /* ORBTInboxViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCE11DD7BFBF00ADA57D /* ORBTInboxViewController.h */; };
-		D49FCCE61DD7BFBF00ADA57D /* ORBTInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCE21DD7BFBF00ADA57D /* ORBTInboxViewController.m */; };
+		D49FCCF51DD7D11000ADA57D /* Conversation.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCF11DD7CA5200ADA57D /* Conversation.h */; };
+		D49FCCF61DD7D11300ADA57D /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCF21DD7CA5200ADA57D /* Conversation.m */; };
+		D49FCCF71DD7D11A00ADA57D /* HTTPPaths.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCE71DD7C51100ADA57D /* HTTPPaths.h */; };
+		D49FCCF81DD7D11F00ADA57D /* ConversationApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCEC1DD7C81300ADA57D /* ConversationApi.h */; };
+		D49FCCF91DD7D12200ADA57D /* ConversationApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCED1DD7C81300ADA57D /* ConversationApi.m */; };
+		D49FCCFC1DD7D21800ADA57D /* Messenger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6894370D6B79441C97A1012690D688F9 /* Messenger.storyboard */; };
 		D65865C21F7F118FD65704B9D62D94BE /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F87B39AA3969495DC69A7AAF7D40E8 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D94816A920C74C24BF9F49626CC69F67 /* ORBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63AFF83FE3CF0DB942440C20356F9EB /* ORBTViewController.m */; };
 		DB5D9F4D439E72DB6BD6359160CDEF3C /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C711F2F162049BDCC740B3AF11C79B2A /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E102FB6604F2D85FEA78BAF91D4B97C5 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 138828BFE2271F973228D96F337454BB /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E816E68792C27F0D3A85A83B4720C291 /* ORBTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = DD26449B8F5CCF8E50710AD0EBCBF238 /* ORBTClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1CCE80C0B8711C2DCFF3A0B3F68DCA0 /* Orbt.io-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28902560353F6E0500246D181E9596E8 /* Orbt.io-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4DFC8819C905E86398E6C43B935AA1A /* ORBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3E71334E4CEA77647C94391012817 /* ORBTViewController.m */; };
+		E1802E17E42286E768F83C2B2CBFD001 /* Orbt.io-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FBF42A000157E943E9152D7F2C6DE0 /* Orbt.io-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,10 +89,10 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 96760AAC8DC72C7C632FB457B3337298;
+			remoteGlobalIDString = E0671D0FA739B473521D34AFDB7EA329;
 			remoteInfo = Orbt.io;
 		};
-		94515E5C5F6B60F1F5E2E07285E35A7D /* PBXContainerItemProxy */ = {
+		91F5B8E29AE72259BAA5B0FD06B6459E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -111,7 +117,6 @@
 		25A01A070F81D39B1F4E9F9D636363DB /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
 		2853C3C9993FB94B5AE7D2D3F5DE6B43 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
 		28902560353F6E0500246D181E9596E8 /* Orbt.io-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Orbt.io-umbrella.h"; sourceTree = "<group>"; };
-		2C0A31C0699A0C4E6079DD7B2148B39C /* ORBTClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ORBTClient.m; sourceTree = "<group>"; };
 		324C57BFE6524FBF3B9676649BD5A00D /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		32D47373E0319966CF9FCC9093AD39AB /* Pods-Orbt.io_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Orbt.io_Tests-umbrella.h"; sourceTree = "<group>"; };
 		352888BF3EA1014B6EBDC58B0645FDC7 /* Pods-Orbt.io_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Orbt.io_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -127,15 +132,18 @@
 		5461D992F0D803F0F05DF72B2849301D /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55955BC3DD5E5A8B34E0FE76BA01651F /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		55FBF42A000157E943E9152D7F2C6DE0 /* Orbt.io-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Orbt.io-dummy.m"; sourceTree = "<group>"; };
-		58ECF57B52F0E36070597DC303350171 /* ORBTViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ORBTViewController.h; sourceTree = "<group>"; };
+		5A62F036C3DE300222D62A6C9743A488 /* ORBTViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ORBTViewController.h; sourceTree = "<group>"; };
 		5C358947BFE35B88AEB42B0947FD6464 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		5D5E80BB7AD3CDF3B4215CF698ECA501 /* AFNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-umbrella.h"; sourceTree = "<group>"; };
 		5EADA5DB8B89A20DC28B3320B41F8570 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		61079765CD93EA891D2E8CEFEB570F83 /* HTTPManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HTTPManager.m; sourceTree = "<group>"; };
 		65A70021CC6BB93F3180DFA142F3A96E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		662F2B693F4836F935DF7B3734AABDE6 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		67E7D6563A537614F07218B6756E64FE /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		6894370D6B79441C97A1012690D688F9 /* Messenger.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Messenger.storyboard; sourceTree = "<group>"; };
 		69031405F392DABAC15A65384A25D9F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69FDCA45562D02A8AB196E1718874625 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		749A4980AE298AF0B03AAB5FF5E6B167 /* HTTPManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HTTPManager.h; sourceTree = "<group>"; };
 		76AF3B78CAEB5805A3854FB23122B87A /* Orbt.io.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Orbt.io.modulemap; sourceTree = "<group>"; };
 		7933BED914F3A3F9E9CE6A5BEAD9B336 /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFNetworking.modulemap; sourceTree = "<group>"; };
 		79E3EC4B61ABA4E98430B468DE9FAEE5 /* Orbt_io.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Orbt_io.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +152,7 @@
 		89782C60CD59C1107EAF872A9289A61B /* Orbt.io-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Orbt.io-prefix.pch"; sourceTree = "<group>"; };
 		8AC87C93D79F8EE7442CC56CB2042E63 /* Pods-Orbt.io_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Orbt.io_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		8CCB8B73E7E6DA5347C1F107304D6676 /* Pods-Orbt.io_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Orbt.io_Tests.modulemap"; sourceTree = "<group>"; };
+		8CCC1C06EEAC57B386D9EE697885C8D7 /* ORBTInboxViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ORBTInboxViewController.h; sourceTree = "<group>"; };
 		8CD830C93513B12193D93249388C9465 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
 		91ADF110233DEE0B6202549725C5502B /* Pods-Orbt.io_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Orbt.io_Example.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -156,8 +165,10 @@
 		B18AC75DD6BC57EBD2DFBF89612E22C1 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
 		B5E494F606A59A26C06EC868BE13A625 /* Pods-Orbt.io_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Orbt.io_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B78CCF0B6DB81F206EB338F172DAFA51 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		B81AA037AEC700BCFF30B05E315C48F6 /* ORBTClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ORBTClient.m; sourceTree = "<group>"; };
 		B8DC67FFD3D275F4DF82652F3312F816 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		BBCDB686F306937C504651ECBF7C24D6 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AFNetworking.m"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
+		BCEAAE711CF3B952BDCFAE201C94DCE6 /* ORBTClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ORBTClient.h; sourceTree = "<group>"; };
 		BEC796A6EF07A12A3C1B2C473A6C4743 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		C073FBF011E354AC474BBE37B93FFAD6 /* Pods-Orbt.io_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Orbt.io_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C181592B691B103939A6DAF8AFFEA65A /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AFNetworking.h"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -166,16 +177,17 @@
 		C6CE0EE14B3BCF57B1EC214EF8A2E17E /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
 		C711F2F162049BDCC740B3AF11C79B2A /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
 		D2A9F5CEBB28B52D2BC77AB22F4B37D4 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
-		D49FCCDC1DD7BFBF00ADA57D /* HTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPManager.h; sourceTree = "<group>"; };
-		D49FCCDD1DD7BFBF00ADA57D /* HTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPManager.m; sourceTree = "<group>"; };
-		D49FCCDF1DD7BFBF00ADA57D /* Messenger.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messenger.storyboard; sourceTree = "<group>"; };
-		D49FCCE11DD7BFBF00ADA57D /* ORBTInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORBTInboxViewController.h; sourceTree = "<group>"; };
-		D49FCCE21DD7BFBF00ADA57D /* ORBTInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORBTInboxViewController.m; sourceTree = "<group>"; };
+		D49FCCE71DD7C51100ADA57D /* HTTPPaths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPPaths.h; sourceTree = "<group>"; };
+		D49FCCEC1DD7C81300ADA57D /* ConversationApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationApi.h; sourceTree = "<group>"; };
+		D49FCCED1DD7C81300ADA57D /* ConversationApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationApi.m; sourceTree = "<group>"; };
+		D49FCCF11DD7CA5200ADA57D /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Conversation.h; path = Models/Conversation.h; sourceTree = "<group>"; };
+		D49FCCF21DD7CA5200ADA57D /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conversation.m; path = Models/Conversation.m; sourceTree = "<group>"; };
 		D4B4F9AEBEF42A70D385D07BC03E6B34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5346FE703EEDDA7C2DB264257984C41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D63AFF83FE3CF0DB942440C20356F9EB /* ORBTViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ORBTViewController.m; sourceTree = "<group>"; };
 		D7F87B39AA3969495DC69A7AAF7D40E8 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		D8E19995D5BF415D6687FD69D70D7215 /* Pods-Orbt.io_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Orbt.io_Example-dummy.m"; sourceTree = "<group>"; };
-		DD26449B8F5CCF8E50710AD0EBCBF238 /* ORBTClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ORBTClient.h; sourceTree = "<group>"; };
+		DDD3012FA87E22DB8011533497C079B7 /* ORBTInboxViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ORBTInboxViewController.m; sourceTree = "<group>"; };
 		DEE09BB7F30EA940FE2E42D5DD4B12C2 /* Pods-Orbt.io_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Orbt.io_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E55AB8F04ED71054D632C74B068EF743 /* Pods_Orbt_io_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orbt_io_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76012BE19B2261B02D7B817AE3DECF7 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -183,25 +195,24 @@
 		EB074BF5653904306AFD109C5775FD68 /* Pods-Orbt.io_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Orbt.io_Example.modulemap"; sourceTree = "<group>"; };
 		F016DD965121F24A15720161B2E61FA0 /* Pods_Orbt_io_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orbt_io_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F710B9B751F58727F33992641D5ADAD7 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		FDE3E71334E4CEA77647C94391012817 /* ORBTViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ORBTViewController.m; sourceTree = "<group>"; };
 		FE43E88E76DE3131E49C5760C59DD8DF /* Pods-Orbt.io_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Orbt.io_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B258F6142420B0E57E937D8D55AE08F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8AD1AD95EE2B34AD129A2CF3488FCB5 /* AFNetworking.framework in Frameworks */,
+				AB7A01AFF6D26318C29CB0F7D3D3DEFE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84B7B4A0D68E0B5D706AC790D06B4D82 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2B5AE95E09B8FBFA31F1CCA31F883F8B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A908F753C0736775B631685A7603F37B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36E41746FEB77C84E9691C12CC295F0D /* AFNetworking.framework in Frameworks */,
-				CC35EA2DBAA4F25FE547EE0D405C374F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,18 +247,25 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		1C7A5928C2929AA72B7DD302D97E4C98 /* Classes */ = {
+		0AD84073160DE491A163EC1655230CA2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D49FCCDB1DD7BFBF00ADA57D /* Networking */,
-				D49FCCDE1DD7BFBF00ADA57D /* Views */,
-				D49FCCE01DD7BFBF00ADA57D /* View Controllers */,
-				DD26449B8F5CCF8E50710AD0EBCBF238 /* ORBTClient.h */,
-				2C0A31C0699A0C4E6079DD7B2148B39C /* ORBTClient.m */,
-				58ECF57B52F0E36070597DC303350171 /* ORBTViewController.h */,
-				FDE3E71334E4CEA77647C94391012817 /* ORBTViewController.m */,
+				8CCC1C06EEAC57B386D9EE697885C8D7 /* ORBTInboxViewController.h */,
+				DDD3012FA87E22DB8011533497C079B7 /* ORBTInboxViewController.m */,
 			);
-			path = Classes;
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0C34EA535F2F2ED9E97659C0566C66AA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				749A4980AE298AF0B03AAB5FF5E6B167 /* HTTPManager.h */,
+				61079765CD93EA891D2E8CEFEB570F83 /* HTTPManager.m */,
+				D49FCCE71DD7C51100ADA57D /* HTTPPaths.h */,
+				D49FCCEC1DD7C81300ADA57D /* ConversationApi.h */,
+				D49FCCED1DD7C81300ADA57D /* ConversationApi.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		27E5264A7FD3E33CB2074B0154C56FC6 /* iOS */ = {
@@ -280,6 +298,14 @@
 			path = "Target Support Files/Pods-Orbt.io_Example";
 			sourceTree = "<group>";
 		};
+		33C7615E9A264B0ADF0772BC1132059F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6894370D6B79441C97A1012690D688F9 /* Messenger.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		45E8A492EBB6A1E1C06E6D2D274DE94B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,7 +318,7 @@
 		47D8EF9E32C9EDB1C7C81E762691F32F /* Orbt.io */ = {
 			isa = PBXGroup;
 			children = (
-				DB5333D1CC4FE233C67367AADEE98AA8 /* Orbt.io */,
+				70794D54FA151E4EDB22FC6F9C5D2E06 /* Orbt.io */,
 				91646D59B3157F953A0271D2D246D98D /* Support Files */,
 			);
 			name = Orbt.io;
@@ -321,6 +347,14 @@
 				81E3F36760F0DA59414DC0413C330B76 /* UIKit */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		70794D54FA151E4EDB22FC6F9C5D2E06 /* Orbt.io */ = {
+			isa = PBXGroup;
+			children = (
+				CE76733E5B14E88289C1CB7A20DD0445 /* Classes */,
+			);
+			path = Orbt.io;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -440,38 +474,28 @@
 			name = Reachability;
 			sourceTree = "<group>";
 		};
-		D49FCCDB1DD7BFBF00ADA57D /* Networking */ = {
+		CE76733E5B14E88289C1CB7A20DD0445 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D49FCCDC1DD7BFBF00ADA57D /* HTTPManager.h */,
-				D49FCCDD1DD7BFBF00ADA57D /* HTTPManager.m */,
+				D49FCCF01DD7CA3500ADA57D /* Models */,
+				BCEAAE711CF3B952BDCFAE201C94DCE6 /* ORBTClient.h */,
+				B81AA037AEC700BCFF30B05E315C48F6 /* ORBTClient.m */,
+				5A62F036C3DE300222D62A6C9743A488 /* ORBTViewController.h */,
+				D63AFF83FE3CF0DB942440C20356F9EB /* ORBTViewController.m */,
+				0C34EA535F2F2ED9E97659C0566C66AA /* Networking */,
+				0AD84073160DE491A163EC1655230CA2 /* View Controllers */,
+				33C7615E9A264B0ADF0772BC1132059F /* Views */,
 			);
-			path = Networking;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		D49FCCDE1DD7BFBF00ADA57D /* Views */ = {
+		D49FCCF01DD7CA3500ADA57D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D49FCCDF1DD7BFBF00ADA57D /* Messenger.storyboard */,
+				D49FCCF11DD7CA5200ADA57D /* Conversation.h */,
+				D49FCCF21DD7CA5200ADA57D /* Conversation.m */,
 			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D49FCCE01DD7BFBF00ADA57D /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D49FCCE11DD7BFBF00ADA57D /* ORBTInboxViewController.h */,
-				D49FCCE21DD7BFBF00ADA57D /* ORBTInboxViewController.m */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		DB5333D1CC4FE233C67367AADEE98AA8 /* Orbt.io */ = {
-			isa = PBXGroup;
-			children = (
-				1C7A5928C2929AA72B7DD302D97E4C98 /* Classes */,
-			);
-			path = Orbt.io;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E26D23E8D92BD6AB0E618800494A48DE /* Serialization */ = {
@@ -515,21 +539,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0D0212FB20843B9AD34D1B95F772F4FE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F1CCE80C0B8711C2DCFF3A0B3F68DCA0 /* Orbt.io-umbrella.h in Headers */,
-				E816E68792C27F0D3A85A83B4720C291 /* ORBTClient.h in Headers */,
-				AA5F6831C3730EB3E487E4C7677EF0F6 /* ORBTViewController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0D372122360491C930E48E9AA24E2A52 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7DE489BE221901DF9084A0A5EE4ED789 /* Pods-Orbt.io_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1A1268D154D79A2B7706C841268254 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC02821CF534B4250B062CF43DC346E /* HTTPManager.h in Headers */,
+				D49FCCF71DD7D11A00ADA57D /* HTTPPaths.h in Headers */,
+				10DD0C63C573E23DE9535D463B1D22FB /* Orbt.io-umbrella.h in Headers */,
+				1B1C5FAAF0BA89B30943E0B52F32D1EA /* ORBTClient.h in Headers */,
+				D49FCCF81DD7D11F00ADA57D /* ConversationApi.h in Headers */,
+				A3623F1CA37B1A594301E0AEBC48900D /* ORBTInboxViewController.h in Headers */,
+				5CFDAA9264652C1AAE048473151E91CA /* ORBTViewController.h in Headers */,
+				D49FCCF51DD7D11000ADA57D /* Conversation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,7 +574,6 @@
 				9323AE442E8479F9299A1235B6F87DC8 /* AFNetworking.h in Headers */,
 				78705591C6850CE867D0356F476E0B6D /* AFNetworkReachabilityManager.h in Headers */,
 				A1D737D6D3D781E98ABFEC6EE0C095EB /* AFSecurityPolicy.h in Headers */,
-				D49FCCE51DD7BFBF00ADA57D /* ORBTInboxViewController.h in Headers */,
 				50D1316AE12493D48D36ACD12F9977B3 /* AFURLConnectionOperation.h in Headers */,
 				0F433A80193ACD16AF746D01A22EE0C1 /* AFURLRequestSerialization.h in Headers */,
 				B2C535FEBEE83B3ED5EA78CB848A964B /* AFURLResponseSerialization.h in Headers */,
@@ -556,7 +584,6 @@
 				95B31D9D71F9E540216811163394F255 /* UIImage+AFNetworking.h in Headers */,
 				300F34DBD1EAD72F220D42721638201C /* UIImageView+AFNetworking.h in Headers */,
 				46003CFB00EE9EDB7751E5D9515CC8D4 /* UIKit+AFNetworking.h in Headers */,
-				D49FCCE31DD7BFBF00ADA57D /* HTTPManager.h in Headers */,
 				5286E996186A50899A9B6E300D65015B /* UIProgressView+AFNetworking.h in Headers */,
 				D65865C21F7F118FD65704B9D62D94BE /* UIRefreshControl+AFNetworking.h in Headers */,
 				25E58152597C474DC6A3F6C5CA90CADE /* UIWebView+AFNetworking.h in Headers */,
@@ -608,18 +635,19 @@
 			productReference = F016DD965121F24A15720161B2E61FA0 /* Pods_Orbt_io_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		96760AAC8DC72C7C632FB457B3337298 /* Orbt.io */ = {
+		E0671D0FA739B473521D34AFDB7EA329 /* Orbt.io */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5429569AC529E907A963DD340E92FBCE /* Build configuration list for PBXNativeTarget "Orbt.io" */;
+			buildConfigurationList = EDEB98EB7E5279F8F049D51FC3F4D8E8 /* Build configuration list for PBXNativeTarget "Orbt.io" */;
 			buildPhases = (
-				F62F0649240D042242B0C336BE6DF975 /* Sources */,
-				A908F753C0736775B631685A7603F37B /* Frameworks */,
-				0D0212FB20843B9AD34D1B95F772F4FE /* Headers */,
+				61C19DDD825BC426CE6A1B7FC03A476E /* Sources */,
+				2B258F6142420B0E57E937D8D55AE08F /* Frameworks */,
+				5C1A1268D154D79A2B7706C841268254 /* Headers */,
+				D49FCCFB1DD7D20E00ADA57D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7CCDDBBDB56EBD40858F61863F53F857 /* PBXTargetDependency */,
+				4D79603F0786096EFEB6CFA0B59D0B12 /* PBXTargetDependency */,
 			);
 			name = Orbt.io;
 			productName = Orbt.io;
@@ -667,12 +695,23 @@
 			projectRoot = "";
 			targets = (
 				1ED8BE8BD6A53853974A60E1AC8B1019 /* AFNetworking */,
-				96760AAC8DC72C7C632FB457B3337298 /* Orbt.io */,
+				E0671D0FA739B473521D34AFDB7EA329 /* Orbt.io */,
 				E07E503FEFFAAA78623A46D5F122DF8F /* Pods-Orbt.io_Example */,
 				6EA6B817F7355BFD0E844D23156E8ACD /* Pods-Orbt.io_Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D49FCCFB1DD7D20E00ADA57D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49FCCFC1DD7D21800ADA57D /* Messenger.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45FA5FC183AA7D4C1301188E415F316A /* Sources */ = {
@@ -680,6 +719,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				85DD1BC2688D2CC2DACFB1279B2E8BE4 /* Pods-Orbt.io_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61C19DDD825BC426CE6A1B7FC03A476E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E6D9D58061E7323352F176195B72FE6 /* HTTPManager.m in Sources */,
+				D49FCCF91DD7D12200ADA57D /* ConversationApi.m in Sources */,
+				E1802E17E42286E768F83C2B2CBFD001 /* Orbt.io-dummy.m in Sources */,
+				926A3418FA8B86EA9C1E5BB1ADD79ACE /* ORBTClient.m in Sources */,
+				5D8FA23F6E9D44E8BAA32E44CD48246D /* ORBTInboxViewController.m in Sources */,
+				D94816A920C74C24BF9F49626CC69F67 /* ORBTViewController.m in Sources */,
+				D49FCCF61DD7D11300ADA57D /* Conversation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +746,6 @@
 				CF0E8D70D0E6ECB756F7029AE0842E17 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				0C1869A00421DFBA1C82AF772E2F13BE /* AFNetworking-dummy.m in Sources */,
 				0DD519176F5025EA203D9DD53C7456C3 /* AFNetworkReachabilityManager.m in Sources */,
-				D49FCCE61DD7BFBF00ADA57D /* ORBTInboxViewController.m in Sources */,
 				6FC4B7B0F5119FBBD5120C275A72F9B3 /* AFSecurityPolicy.m in Sources */,
 				485E2C5ACB6046EBA39015AE5CDC18B2 /* AFURLConnectionOperation.m in Sources */,
 				964BFEA9E3E84571F866D24102FEA675 /* AFURLRequestSerialization.m in Sources */,
@@ -703,7 +755,6 @@
 				23F62266558CF7EA25B7AE2C7E75E67F /* UIAlertView+AFNetworking.m in Sources */,
 				7A6F8593BBD598773DCC198202C35A7F /* UIButton+AFNetworking.m in Sources */,
 				1D974D4F7BB49961BF96F2A9084B4812 /* UIImageView+AFNetworking.m in Sources */,
-				D49FCCE41DD7BFBF00ADA57D /* HTTPManager.m in Sources */,
 				928D0E04335B82340005F85E6B6FF1E8 /* UIProgressView+AFNetworking.m in Sources */,
 				C8EA7B27FCA8377BE686BE03C73E3889 /* UIRefreshControl+AFNetworking.m in Sources */,
 				6F9313FED3763C57F6EC60B6175CDD25 /* UIWebView+AFNetworking.m in Sources */,
@@ -718,35 +769,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F62F0649240D042242B0C336BE6DF975 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				963586B4B03E92F4F279896E3B2B319D /* Orbt.io-dummy.m in Sources */,
-				082BA6CEB93D6DF79475FB5A9182316C /* ORBTClient.m in Sources */,
-				F4DFC8819C905E86398E6C43B935AA1A /* ORBTViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4D79603F0786096EFEB6CFA0B59D0B12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 1ED8BE8BD6A53853974A60E1AC8B1019 /* AFNetworking */;
+			targetProxy = 91F5B8E29AE72259BAA5B0FD06B6459E /* PBXContainerItemProxy */;
+		};
 		63E33B7DE72A0AF6713483141652E5CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AFNetworking;
 			target = 1ED8BE8BD6A53853974A60E1AC8B1019 /* AFNetworking */;
 			targetProxy = 14DCEFB94E3A675E4A975BB5E0530FA2 /* PBXContainerItemProxy */;
 		};
-		7CCDDBBDB56EBD40858F61863F53F857 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFNetworking;
-			target = 1ED8BE8BD6A53853974A60E1AC8B1019 /* AFNetworking */;
-			targetProxy = 94515E5C5F6B60F1F5E2E07285E35A7D /* PBXContainerItemProxy */;
-		};
 		A28A3FE07D8F34870A79CBB168EC7DCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Orbt.io;
-			target = 96760AAC8DC72C7C632FB457B3337298 /* Orbt.io */;
+			target = E0671D0FA739B473521D34AFDB7EA329 /* Orbt.io */;
 			targetProxy = 613060D2ABDF878F3DC284EBCD3E2FD1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -871,6 +912,37 @@
 			};
 			name = Debug;
 		};
+		74A6672150FD0BAE57BD4D6DE85C9182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0205CD30C7A100D1EA297411D2FEF415 /* Orbt.io.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Orbt.io/Orbt.io-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Orbt.io/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Orbt.io/Orbt.io.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Orbt_io;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		899A2F2AA4066C1E49C88D3248AAE518 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91ADF110233DEE0B6202549725C5502B /* Pods-Orbt.io_Example.release.xcconfig */;
@@ -898,37 +970,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_Orbt_io_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		89AEFB8154C241C000C74897224D3843 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0205CD30C7A100D1EA297411D2FEF415 /* Orbt.io.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Orbt.io/Orbt.io-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Orbt.io/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Orbt.io/Orbt.io.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Orbt_io;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1007,7 +1048,7 @@
 			};
 			name = Debug;
 		};
-		BBF3175392B2B3B9F63B132BA6D3F3AC /* Debug */ = {
+		BADABF9F07272F729C7B155FC34894F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0205CD30C7A100D1EA297411D2FEF415 /* Orbt.io.xcconfig */;
 			buildSettings = {
@@ -1121,15 +1162,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5429569AC529E907A963DD340E92FBCE /* Build configuration list for PBXNativeTarget "Orbt.io" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BBF3175392B2B3B9F63B132BA6D3F3AC /* Debug */,
-				89AEFB8154C241C000C74897224D3843 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		69ABC1B9B08969C52A33BB850C4BAF95 /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1144,6 +1176,15 @@
 			buildConfigurations = (
 				9B12271133ED2099F9262495F38B8FC5 /* Debug */,
 				899A2F2AA4066C1E49C88D3248AAE518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDEB98EB7E5279F8F049D51FC3F4D8E8 /* Build configuration list for PBXNativeTarget "Orbt.io" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADABF9F07272F729C7B155FC34894F7 /* Debug */,
+				74A6672150FD0BAE57BD4D6DE85C9182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
