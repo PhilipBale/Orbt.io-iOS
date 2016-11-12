@@ -1,0 +1,16 @@
+PODS:
+  - Orbt.io (0.1.0)
+
+DEPENDENCIES:
+  - Orbt.io (from `../`)
+
+EXTERNAL SOURCES:
+  Orbt.io:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Orbt.io: 3d35680ce04d993ab91878ec48612bbc1da9b184
+
+PODFILE CHECKSUM: b25d10af968b22de341736e938ee84158f550ef7
+
+COCOAPODS: 1.1.1

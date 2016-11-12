@@ -1,0 +1,6 @@
+framework module Orbt_io {
+  umbrella header "Orbt.io-umbrella.h"
+
+  export *
+  module * { export * }
+}
