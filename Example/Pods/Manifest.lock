@@ -1,5 +1,27 @@
 PODS:
-  - Orbt.io (0.1.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Orbt.io (0.1.0):
+    - AFNetworking (= 2.6.3)
 
 DEPENDENCIES:
   - Orbt.io (from `../`)
@@ -9,7 +31,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Orbt.io: 3d35680ce04d993ab91878ec48612bbc1da9b184
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Orbt.io: 34e9ad4aff6ac2bda97418de9ac064c4538e8742
 
 PODFILE CHECKSUM: b25d10af968b22de341736e938ee84158f550ef7
 

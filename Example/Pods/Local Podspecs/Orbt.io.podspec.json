@@ -1,9 +1,9 @@
 {
   "name": "Orbt.io",
   "version": "0.1.0",
-  "summary": "A short description of Orbt.io.",
+  "summary": "Orbt.io is a realtime, cross-platform messaging service.  Add chat to your applications in minutes!",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/Orbt.io",
+  "homepage": "https://github.com/philipbale/Orbt.io",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,16 @@
     "=": "pbale95@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/Orbt.io.git",
+    "git": "https://github.com/philipbale/Orbt.io.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Orbt.io/Classes/**/*"
+  "source_files": "Orbt.io/Classes/**/*",
+  "dependencies": {
+    "AFNetworking": [
+      "2.6.3"
+    ]
+  }
 }

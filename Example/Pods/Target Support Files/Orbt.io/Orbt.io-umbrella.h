@@ -3,6 +3,7 @@
 #endif
 
 #import "ORBTClient.h"
+#import "ORBTInboxViewController.h"
 #import "ORBTViewController.h"
 
 FOUNDATION_EXPORT double Orbt_ioVersionNumber;
