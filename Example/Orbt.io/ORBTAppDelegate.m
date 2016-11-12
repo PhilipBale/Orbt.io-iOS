@@ -7,11 +7,13 @@
 //
 
 #import "ORBTAppDelegate.h"
+#import "ORBTClient.h"
 
 @implementation ORBTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [ORBTClient setAppId:@"58277dfa2714b5342634d011"];
     // Override point for customization after application launch.
     return YES;
 }
