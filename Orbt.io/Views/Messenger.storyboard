@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,17 +23,56 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUb-WI-nVE">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="NzS-qD-OcN" kind="show" id="L71-lT-r2m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rIq-A0-gW2" firstAttribute="centerX" secondItem="aWf-cr-m3q" secondAttribute="centerX" id="CUj-70-PzR"/>
+                            <constraint firstItem="FUb-WI-nVE" firstAttribute="centerX" secondItem="rIq-A0-gW2" secondAttribute="centerX" id="LdK-jG-S6u"/>
                             <constraint firstItem="rIq-A0-gW2" firstAttribute="centerY" secondItem="aWf-cr-m3q" secondAttribute="centerY" id="pfA-3d-P5M"/>
+                            <constraint firstItem="FUb-WI-nVE" firstAttribute="top" secondItem="rIq-A0-gW2" secondAttribute="bottom" constant="18" id="srG-w0-cB2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="A14-iT-9B7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7P-eS-Dol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="134"/>
+            <point key="canvasLocation" x="1087.2" y="133.5832083958021"/>
+        </scene>
+        <!--Conversation-->
+        <scene sceneID="Awd-g3-pqz">
+            <objects>
+                <viewController title="Conversation" id="NzS-qD-OcN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ysT-oT-82O"/>
+                        <viewControllerLayoutGuide type="bottom" id="iwG-7x-Py7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0xu-IJ-RYO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssp-ye-czW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ssp-ye-czW" firstAttribute="centerX" secondItem="0xu-IJ-RYO" secondAttribute="centerX" id="mbI-xv-r9a"/>
+                            <constraint firstItem="Ssp-ye-czW" firstAttribute="centerY" secondItem="0xu-IJ-RYO" secondAttribute="centerY" id="qET-aY-u64"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Conversation" id="Pfh-9Z-5mg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSu-ez-PxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

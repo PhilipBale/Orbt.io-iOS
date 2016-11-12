@@ -22,11 +22,25 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Messenger" bundle:[NSBundle bundleForClass:[self class]]];
     self.inboxViewController = [sb instantiateViewControllerWithIdentifier:@"InboxVC"];
-    [self addChildViewController:self.inboxViewController ];
     [self.inboxViewController.view setFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:self.inboxViewController.view];
-    [self.inboxViewController didMoveToParentViewController:self];
-    // Do any additional setup after loading the view.
+    
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UINavigationController *navController = self.navigationController;
+        if (!navController) {
+            NSLog(@"No nav controller, creating one");
+            navController = [[UINavigationController alloc] initWithRootViewController:self.inboxViewController];
+            [navController setTitle:@"Messages"];
+            [[navController.navigationBar topItem] setTitle:@"Messages"];
+            [self presentViewController:navController animated:NO completion:nil];
+            
+        } else {
+            [self addChildViewController:self.inboxViewController ];
+            
+            [self.view addSubview:self.inboxViewController.view];
+            [self.inboxViewController didMoveToParentViewController:self];
+        }
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,13 +49,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
