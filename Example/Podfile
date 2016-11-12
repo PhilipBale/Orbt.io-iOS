@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Orbt.io_Example' do
+  pod 'Orbt.io', :path => '../'
+
+  target 'Orbt.io_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
