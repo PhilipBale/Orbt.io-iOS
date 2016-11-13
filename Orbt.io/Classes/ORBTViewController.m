@@ -26,21 +26,26 @@
     
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        UINavigationController *navController = self.navigationController;
-        if (!navController) {
-            NSLog(@"No nav controller, creating one");
-            navController = [[UINavigationController alloc] initWithRootViewController:self.inboxViewController];
-            [navController setTitle:@"Messages"];
-            [[navController.navigationBar topItem] setTitle:@"Messages"];
-            [self presentViewController:navController animated:NO completion:nil];
-            
-        } else {
-            [self addChildViewController:self.inboxViewController ];
-            
-            [self.view addSubview:self.inboxViewController.view];
-            [self.inboxViewController didMoveToParentViewController:self];
-        }
+        [self configureView];
     });
+}
+
+- (void)configureView
+{
+    UINavigationController *navController = self.navigationController;
+    if (!navController) {
+        NSLog(@"No nav controller, creating one");
+        navController = [[UINavigationController alloc] initWithRootViewController:self.inboxViewController];
+        [navController setTitle:@"Messages"];
+        [[navController.navigationBar topItem] setTitle:@"Messages"];
+        [self presentViewController:navController animated:NO completion:nil];
+        
+    } else {
+        [self addChildViewController:self.inboxViewController ];
+        
+        [self.view addSubview:self.inboxViewController.view];
+        [self.inboxViewController didMoveToParentViewController:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

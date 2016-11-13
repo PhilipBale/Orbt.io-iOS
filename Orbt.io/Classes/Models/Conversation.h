@@ -10,6 +10,8 @@
 
 @interface Conversation : NSObject
 
+@property (nonatomic, strong) NSString *_id;
+
 + (Conversation *)conversationFromDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -64,14 +64,16 @@
 		C60714C11ADDB1F1220DC794451931CA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACFBA88A948B1EF6BFCF0A626F54EF1 /* SystemConfiguration.framework */; };
 		C8EA7B27FCA8377BE686BE03C73E3889 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A363D19C9F8FF2723FBF1B2AE6F4A68E /* UIRefreshControl+AFNetworking.m */; };
 		CF0E8D70D0E6ECB756F7029AE0842E17 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4004CB328D9B73234395795631AF675A /* AFNetworkActivityIndicatorManager.m */; };
-		D49FCCF51DD7D11000ADA57D /* Conversation.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCF11DD7CA5200ADA57D /* Conversation.h */; };
+		D49FCCF51DD7D11000ADA57D /* Conversation.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCF11DD7CA5200ADA57D /* Conversation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D49FCCF61DD7D11300ADA57D /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCF21DD7CA5200ADA57D /* Conversation.m */; };
 		D49FCCF71DD7D11A00ADA57D /* HTTPPaths.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCE71DD7C51100ADA57D /* HTTPPaths.h */; };
-		D49FCCF81DD7D11F00ADA57D /* ConversationApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCEC1DD7C81300ADA57D /* ConversationApi.h */; };
+		D49FCCF81DD7D11F00ADA57D /* ConversationApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCEC1DD7C81300ADA57D /* ConversationApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D49FCCF91DD7D12200ADA57D /* ConversationApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCED1DD7C81300ADA57D /* ConversationApi.m */; };
 		D49FCCFC1DD7D21800ADA57D /* Messenger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6894370D6B79441C97A1012690D688F9 /* Messenger.storyboard */; };
 		D49FCD011DD7DCA300ADA57D /* ConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCCFE1DD7DCA000ADA57D /* ConversationCell.m */; };
-		D49FCD021DD7DCA900ADA57D /* ConversationCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCFD1DD7DCA000ADA57D /* ConversationCell.h */; };
+		D49FCD021DD7DCA900ADA57D /* ConversationCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCCFD1DD7DCA000ADA57D /* ConversationCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D49FCD051DD9140A00ADA57D /* UserApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCD031DD9140A00ADA57D /* UserApi.h */; };
+		D49FCD061DD9140A00ADA57D /* UserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCD041DD9140A00ADA57D /* UserApi.m */; };
 		D65865C21F7F118FD65704B9D62D94BE /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F87B39AA3969495DC69A7AAF7D40E8 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D94816A920C74C24BF9F49626CC69F67 /* ORBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63AFF83FE3CF0DB942440C20356F9EB /* ORBTViewController.m */; };
 		DB5D9F4D439E72DB6BD6359160CDEF3C /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C711F2F162049BDCC740B3AF11C79B2A /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -186,6 +188,8 @@
 		D49FCCF21DD7CA5200ADA57D /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Conversation.m; path = Models/Conversation.m; sourceTree = "<group>"; };
 		D49FCCFD1DD7DCA000ADA57D /* ConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationCell.h; sourceTree = "<group>"; };
 		D49FCCFE1DD7DCA000ADA57D /* ConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationCell.m; sourceTree = "<group>"; };
+		D49FCD031DD9140A00ADA57D /* UserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserApi.h; sourceTree = "<group>"; };
+		D49FCD041DD9140A00ADA57D /* UserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserApi.m; sourceTree = "<group>"; };
 		D4B4F9AEBEF42A70D385D07BC03E6B34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5346FE703EEDDA7C2DB264257984C41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D63AFF83FE3CF0DB942440C20356F9EB /* ORBTViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ORBTViewController.m; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 				D49FCCE71DD7C51100ADA57D /* HTTPPaths.h */,
 				D49FCCEC1DD7C81300ADA57D /* ConversationApi.h */,
 				D49FCCED1DD7C81300ADA57D /* ConversationApi.m */,
+				D49FCD031DD9140A00ADA57D /* UserApi.h */,
+				D49FCD041DD9140A00ADA57D /* UserApi.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -561,11 +567,12 @@
 				D49FCCF71DD7D11A00ADA57D /* HTTPPaths.h in Headers */,
 				10DD0C63C573E23DE9535D463B1D22FB /* Orbt.io-umbrella.h in Headers */,
 				1B1C5FAAF0BA89B30943E0B52F32D1EA /* ORBTClient.h in Headers */,
+				D49FCD051DD9140A00ADA57D /* UserApi.h in Headers */,
 				D49FCD021DD7DCA900ADA57D /* ConversationCell.h in Headers */,
 				D49FCCF81DD7D11F00ADA57D /* ConversationApi.h in Headers */,
 				A3623F1CA37B1A594301E0AEBC48900D /* ORBTInboxViewController.h in Headers */,
-				5CFDAA9264652C1AAE048473151E91CA /* ORBTViewController.h in Headers */,
 				D49FCCF51DD7D11000ADA57D /* Conversation.h in Headers */,
+				5CFDAA9264652C1AAE048473151E91CA /* ORBTViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +744,7 @@
 				6E6D9D58061E7323352F176195B72FE6 /* HTTPManager.m in Sources */,
 				D49FCCF91DD7D12200ADA57D /* ConversationApi.m in Sources */,
 				E1802E17E42286E768F83C2B2CBFD001 /* Orbt.io-dummy.m in Sources */,
+				D49FCD061DD9140A00ADA57D /* UserApi.m in Sources */,
 				926A3418FA8B86EA9C1E5BB1ADD79ACE /* ORBTClient.m in Sources */,
 				5D8FA23F6E9D44E8BAA32E44CD48246D /* ORBTInboxViewController.m in Sources */,
 				D94816A920C74C24BF9F49626CC69F67 /* ORBTViewController.m in Sources */,
