@@ -59,8 +59,6 @@
             if (completion) completion(NO);
         }
     }];
-    
-    if (completion) completion(YES);
 }
 
 - (void)loadConversationsWithCompletion:(void (^)(BOOL))completion
@@ -68,6 +66,9 @@
     [ConversationApi allConversationsWithCompletion:^(BOOL success, NSArray<Conversation *> *conversations) {
         if (success) {
             _conversations = [[NSMutableArray alloc] initWithArray:conversations];
+            if (completion) completion(YES);
+        } else {
+            if (completion) completion(NO);
         }
     }];
 }

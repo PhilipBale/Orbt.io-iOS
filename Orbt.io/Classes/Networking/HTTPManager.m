@@ -40,18 +40,9 @@
 + (void)GET:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure attemptsLeft:(NSInteger)attemptsLeft
 {
     [[HTTPManager sharedManager] GET:URLString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        BOOL trueSuccess = [self wasSuccessfulGet:responseObject];
-        if (success && trueSuccess)
+        if (success)
         {
             success(responseObject);
-        }
-        else if (!trueSuccess)
-        {
-            if (failure)
-            {
-                NSLog(@"[ORBTHTTPManager] NOTICE: Successful HTTP GET but incorrect status code match");
-                failure(nil);
-            }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (attemptsLeft)
@@ -75,18 +66,9 @@
 {
     NSLog(@"[ORBTHTTPManager] Posting to url: %@, attempts left: %li", URLString, attemptsLeft);
     [[HTTPManager sharedManager] POST:URLString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        BOOL trueSuccess = [self wasSuccessfulPost:responseObject];
-        if (success && trueSuccess)
+        if (success)
         {
             success(responseObject);
-        }
-        else if (!trueSuccess)
-        {
-            if (failure)
-            {
-                NSLog(@"[ORBTHTTPManager] NOTICE: Successful HTTP POST but incorrect status code match");
-                failure(nil);
-            }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (attemptsLeft)
@@ -100,18 +82,6 @@
             failure(error);
         }
     }];
-}
-
-+ (BOOL)wasSuccessfulGet:(id)responseObject
-{
-    NSDictionary *responseDict = responseObject;
-    return [responseDict[@"status"] isEqualToString:@"ok"];
-}
-
-+ (BOOL)wasSuccessfulPost:(id)responseObject
-{
-    NSDictionary *responseDict = responseObject;
-    return [responseDict[@"status"] isEqualToString:@"created"];
 }
 
 + (void)setRequestHeadersForAppId:(NSString *)appId uuid:(NSString *)uuid identityToken:(NSString *)identityToken
