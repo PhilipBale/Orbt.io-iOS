@@ -23,7 +23,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H3B-Na-nKB">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConversationCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConversationCell" rowHeight="55" id="kJL-a4-ix0" customClass="ConversationCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConversationCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConversationCell" rowHeight="55" id="kJL-a4-ix0" customClass="ConversationCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kJL-a4-ix0" id="0ys-Hc-8xZ">
@@ -98,7 +98,7 @@
         <!--Conversation-->
         <scene sceneID="Awd-g3-pqz">
             <objects>
-                <viewController title="Conversation" id="NzS-qD-OcN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConversationVC" title="Conversation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NzS-qD-OcN" customClass="ORBTConversationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ysT-oT-82O"/>
                         <viewControllerLayoutGuide type="bottom" id="iwG-7x-Py7"/>
@@ -106,18 +106,7 @@
                     <view key="view" contentMode="scaleToFill" id="0xu-IJ-RYO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssp-ye-czW">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Ssp-ye-czW" firstAttribute="centerX" secondItem="0xu-IJ-RYO" secondAttribute="centerX" id="mbI-xv-r9a"/>
-                            <constraint firstItem="Ssp-ye-czW" firstAttribute="centerY" secondItem="0xu-IJ-RYO" secondAttribute="centerY" id="qET-aY-u64"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Conversation" id="Pfh-9Z-5mg"/>
                 </viewController>

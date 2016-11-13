@@ -9,6 +9,7 @@
 #import "ORBTInboxViewController.h"
 #import "ConversationCell.h"
 #import "ORBTClient.h"
+#import "ORBTConversationViewController.h"
 
 @interface ORBTInboxViewController ()
 
@@ -24,11 +25,13 @@
     self.tableView.dataSource = self;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-       [[ORBTClient sharedClient] loadConversationsWithCompletion:^(BOOL success) {
-           if (success) {
-              [self.tableView reloadData];
-           }
-       }];
+        [[ORBTClient sharedClient] loadConversationsWithCompletion:^(BOOL success) {
+            if (success) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
+            }
+        }];
     });
 }
 
@@ -43,6 +46,14 @@
     [cell.titleLabel setText:[NSString stringWithFormat:@"hey %@", [conversation _id]]];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Messenger" bundle:[NSBundle bundleForClass:[self class]]];
+    ORBTConversationViewController *conversationVC = [sb instantiateViewControllerWithIdentifier:@"ConversationVC"];
+    [self.navigationController pushViewController:conversationVC animated:YES];
+
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

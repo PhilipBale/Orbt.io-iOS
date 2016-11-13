@@ -22,6 +22,9 @@
   "dependencies": {
     "AFNetworking": [
       "2.6.3"
+    ],
+    "SlackTextViewController": [
+      "1.9.5"
     ]
   }
 }
