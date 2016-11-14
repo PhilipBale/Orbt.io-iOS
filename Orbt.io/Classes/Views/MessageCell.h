@@ -11,7 +11,7 @@
 @interface MessageCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *nameLabel;
-@property (nonatomic, strong) UILabel *textLabel;
+@property (nonatomic, strong) UILabel *messageTextLabel;
 
 + (NSString *)reuseId;
 

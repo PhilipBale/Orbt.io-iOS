@@ -28,7 +28,7 @@
 
 + (void)loadMessagesForConversation:(NSString *)conversationId completion:(void (^)(BOOL success, NSArray<Message *> *messages))completion
 {
-    [HTTPManager GET:[NSString stringWithFormat:@"%@/%@", kApiPathMessagesForConversation, conversationId] parameters:nil success:^(NSDictionary *responseObject)
+    [HTTPManager GET:[NSString stringWithFormat:@"%@/%@/messages", kApiPathMessagesForConversation, conversationId] parameters:nil success:^(NSDictionary *responseObject)
      {
          NSMutableArray *messageObjects = [[NSMutableArray alloc] init];
          

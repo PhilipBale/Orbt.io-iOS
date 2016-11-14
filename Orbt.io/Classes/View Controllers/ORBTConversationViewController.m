@@ -28,32 +28,35 @@
     self.inverted = YES;
     
     [ConversationApi loadMessagesForConversation:[[self conversation] _id] completion:^(BOOL success, NSArray<Message *> *messages) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (success) {
+        if (success) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.conversation setMessages:messages];
                 [self.tableView reloadData];
-            } 
-        });
+                
+            });
+        }
     }];
-    // Do any additional setup after loading the view.
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:[MessageCell reuseId] forIndexPath: indexPath];
+    MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:[MessageCell reuseId]];
+    if (!cell) {
+        cell = [[MessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[MessageCell reuseId]];
+    }
     Message *message = [[self.conversation messages] objectAtIndex:indexPath.row];
     
-    cell.textLabel = [message text];
-    cell.nameLabel = [message senderName];
+    [cell.messageTextLabel setText:[message text]];
+    [cell.nameLabel setText:[message senderName]];
     
     cell.transform = self.tableView.transform;
     
     return cell;
-
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [[self.conversation messages] count];
+    return [[[self conversation] messages] count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

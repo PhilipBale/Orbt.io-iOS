@@ -15,6 +15,7 @@
     Message *message = [[Message alloc] init];
     message._id = [dictionary objectForKey:@"_id"];
     message.text = [dictionary objectForKey:@"text"];
+    message.senderName = @"yo";
     
     return message;
 }
