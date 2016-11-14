@@ -104,6 +104,10 @@
 		CF0E8D70D0E6ECB756F7029AE0842E17 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D6B4E8D9B9ED64EE537AE31E54813E /* AFNetworkActivityIndicatorManager.m */; };
 		D11CBA98AA32AE2506124CA9109C460A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CBE33939BB946E5A20FB12A1A5F53D6 /* Foundation.framework */; };
 		D49FCD101DD92D7700ADA57D /* Messenger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB06BDC5727202E07B3F76D9121476A4 /* Messenger.storyboard */; };
+		D49FCD131DDA352800ADA57D /* MessageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCD111DDA352800ADA57D /* MessageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D49FCD141DDA352800ADA57D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCD121DDA352800ADA57D /* MessageCell.m */; };
+		D49FCD171DDA38B600ADA57D /* Message.h in Headers */ = {isa = PBXBuildFile; fileRef = D49FCD151DDA38B500ADA57D /* Message.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D49FCD181DDA38B600ADA57D /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D49FCD161DDA38B500ADA57D /* Message.m */; };
 		D65865C21F7F118FD65704B9D62D94BE /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D98476AEE228559D2871A4EEEAE1FB /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA6CD46603104F3D2A7015520643827A /* UIView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 74314931B891C00C8B5A0C9A9A7461D0 /* UIView+SLKAdditions.h */; };
 		DB5D9F4D439E72DB6BD6359160CDEF3C /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 321665E61BCDF1724B794ADE59936A79 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -294,6 +298,10 @@
 		D1C8020627BF0CA9A3A00AAD78E0826A /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FF1242C0551E6DF351574D6D5E83E0 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		D435AE21BBF7A92A338387F6D2BDF60C /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		D49FCD111DDA352800ADA57D /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		D49FCD121DDA352800ADA57D /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		D49FCD151DDA38B500ADA57D /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		D49FCD161DDA38B500ADA57D /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		D4B4F9AEBEF42A70D385D07BC03E6B34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5346FE703EEDDA7C2DB264257984C41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D752BD5C3024AF96A9F357840B9953FD /* AFNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AFNetworking.modulemap; sourceTree = "<group>"; };
@@ -389,6 +397,8 @@
 			children = (
 				F4BDBAD7D8403E123F7BF75AA865B20B /* Conversation.h */,
 				B85937659A9C63D8AF4A27A7D4E01125 /* Conversation.m */,
+				D49FCD151DDA38B500ADA57D /* Message.h */,
+				D49FCD161DDA38B500ADA57D /* Message.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -673,6 +683,8 @@
 				7FDBD34962C4F7586C3AA27D1ADA4CEE /* ConversationCell.h */,
 				8D6D1944745D1646F2F8BA55C019E71C /* ConversationCell.m */,
 				BB06BDC5727202E07B3F76D9121476A4 /* Messenger.storyboard */,
+				D49FCD111DDA352800ADA57D /* MessageCell.h */,
+				D49FCD121DDA352800ADA57D /* MessageCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -767,6 +779,8 @@
 				5807777DEC68CBEB80531F692CE13F9B /* HTTPPaths.h in Headers */,
 				664567B3DE4CA7136218A0B07DCEE66A /* ORBTConversationViewController.h in Headers */,
 				5B99E0346C42F292A26494D2C8E4269F /* Orbt.io-umbrella.h in Headers */,
+				D49FCD131DDA352800ADA57D /* MessageCell.h in Headers */,
+				D49FCD171DDA38B600ADA57D /* Message.h in Headers */,
 				BA0D1B54D4B26C86305C716EC9A1E39C /* ORBTClient.h in Headers */,
 				7D72062727423D649216773DEFF9D9B6 /* ORBTInboxViewController.h in Headers */,
 				F4ABFA7C6E39B50291D5E627874B9C5B /* ORBTViewController.h in Headers */,
@@ -962,6 +976,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				815308CF91FCBEDB75BE4682847C238B /* Conversation.m in Sources */,
+				D49FCD181DDA38B600ADA57D /* Message.m in Sources */,
 				CD28D8D4E1883D2B72C23C60AC8BEA78 /* ConversationApi.m in Sources */,
 				42152032D6E57DAD0C13F9DD6B6D5EB9 /* ConversationCell.m in Sources */,
 				644D050C4BD83B31A176BA47D4B0D705 /* HTTPManager.m in Sources */,
@@ -969,6 +984,7 @@
 				AF1FAE501BCB70744ED9A2AA94CE3643 /* Orbt.io-dummy.m in Sources */,
 				93C4D9701B7FCCD6A4D811CFBFED70A9 /* ORBTClient.m in Sources */,
 				074933F00F6DC2D8681C834BE22EA184 /* ORBTInboxViewController.m in Sources */,
+				D49FCD141DDA352800ADA57D /* MessageCell.m in Sources */,
 				1DF9E3E7D4824A8506B104935E61FCF1 /* ORBTViewController.m in Sources */,
 				2FFB9D73510445B29D8EC2B4E855137C /* UserApi.m in Sources */,
 			);

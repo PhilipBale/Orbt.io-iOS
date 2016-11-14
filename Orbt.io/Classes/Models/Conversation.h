@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Message.h"
 
 @interface Conversation : NSObject
 
 @property (nonatomic, strong) NSString *_id;
+
+@property (nonatomic, strong) NSMutableArray<Message *> *messages;
 
 + (Conversation *)conversationFromDictionary:(NSDictionary *)dictionary;
 

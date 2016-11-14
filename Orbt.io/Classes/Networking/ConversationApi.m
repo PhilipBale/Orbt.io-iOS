@@ -26,4 +26,20 @@
      }];
 }
 
++ (void)loadMessagesForConversation:(NSString *)conversationId completion:(void (^)(BOOL success, NSArray<Message *> *messages))completion
+{
+    [HTTPManager GET:[NSString stringWithFormat:@"%@/%@", kApiPathMessagesForConversation, conversationId] parameters:nil success:^(NSDictionary *responseObject)
+     {
+         NSMutableArray *messageObjects = [[NSMutableArray alloc] init];
+         
+         for (NSDictionary *messageDictionary in responseObject)
+         {
+             [messageObjects addObject:[Message messageFromDictionary:messageDictionary]];
+         }
+         if (completion) completion(YES, messageObjects);
+     } failure:^(NSError *error) {
+         if (completion) completion(NO, nil);
+     }];
+}
+
 @end

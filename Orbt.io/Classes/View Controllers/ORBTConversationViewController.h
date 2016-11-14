@@ -7,7 +7,10 @@
 //
 
 #import "SLKTextViewController.h"
+#import "Conversation.h"
 
 @interface ORBTConversationViewController : SLKTextViewController
+
+@property (nonatomic, strong) Conversation *conversation;
 
 @end

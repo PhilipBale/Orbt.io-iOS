@@ -13,5 +13,6 @@
 @interface ConversationApi : NSObject
 
 + (void)allConversationsWithCompletion:(void (^)(BOOL success, NSArray<Conversation *> *conversations))completion;
++ (void)loadMessagesForConversation:(NSString *)conversationId completion:(void (^)(BOOL success, NSArray<Message *> *messages))completion;
 
 @end

@@ -17,6 +17,7 @@
 #define kAPIAttemptDelay 1.50
 
 static NSString * const kApiPathAllConversations = API_PATH(conversations);
+static NSString * const kApiPathMessagesForConversation = API_PATH(conversations);
 static NSString * const kApiPathCheckCredentials = API_PATH(users);
 
 #endif /* HTTPPaths_h */
