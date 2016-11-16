@@ -16,10 +16,10 @@
      {
          NSMutableArray *conversationObjects = [[NSMutableArray alloc] init];
          
-             for (NSDictionary *conversationDictionary in responseObject)
-             {
-                 [conversationObjects addObject:[Conversation conversationFromDictionary:conversationDictionary]];
-             }          
+         for (NSDictionary *conversationDictionary in responseObject)
+         {
+             [conversationObjects addObject:[Conversation conversationFromDictionary:conversationDictionary]];
+         }
          if (completion) completion(YES, conversationObjects);
      } failure:^(NSError *error) {
          if (completion) completion(NO, nil);
@@ -36,6 +36,14 @@
          {
              [messageObjects addObject:[Message messageFromDictionary:messageDictionary]];
          }
+         
+         
+         messageObjects = [[messageObjects sortedArrayUsingComparator:
+                            ^(id obj1, id obj2) {
+                                Message *message1 = obj1;
+                                Message *message2 = obj2;
+                                return [[message2 timestamp] compare:[message1 timestamp]];
+                            }] mutableCopy];
          if (completion) completion(YES, messageObjects);
      } failure:^(NSError *error) {
          if (completion) completion(NO, nil);
