@@ -20,8 +20,10 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - DateTools (1.7.0)
   - Orbt.io (0.1.0):
     - AFNetworking (= 2.6.3)
+    - DateTools
     - SlackTextViewController (= 1.9.5)
   - SlackTextViewController (1.9.5)
 
@@ -34,7 +36,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  Orbt.io: 8a6f460868ece195320d5b607481a49d771f21f5
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  Orbt.io: bfa795bd57c8d9e16c68ff4df5a994a2f65f998e
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
 
 PODFILE CHECKSUM: b25d10af968b22de341736e938ee84158f550ef7

@@ -40,5 +40,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'AFNetworking', '2.6.3'
   s.dependency 'SlackTextViewController', '1.9.5'
+  s.dependency 'DateTools'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

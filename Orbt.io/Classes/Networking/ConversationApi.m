@@ -42,4 +42,16 @@
      }];
 }
 
++ (void)sendMessage:(NSString *)text conversation:(NSString *)conversationId completion:(void (^)(BOOL success, Message *message))completion
+{
+    NSDictionary *params = @{@"conversation":conversationId, @"text":text};
+    [HTTPManager POST:kApiPathSendMessage parameters:params success:^(NSDictionary *responseObject)
+     {
+         Message *message = [Message messageFromDictionary:responseObject];
+         if (completion) completion(YES, message);
+     } failure:^(NSError *error) {
+         if (completion) completion(NO, nil);
+     }];
+}
+
 @end

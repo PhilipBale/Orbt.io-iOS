@@ -13,6 +13,7 @@
 
 @interface ORBTClient ()
 
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) NSString *identityToken;
 
 @end
@@ -27,7 +28,8 @@
     
     dispatch_once(&pred, ^{
         _sharedClient = [[self alloc] init];
-        
+        [_sharedClient setDateFormatter:[[NSDateFormatter alloc] init]];
+        [[_sharedClient dateFormatter] setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
         NSLog(@"[ORBTClient] Client initialized");
         
     });
@@ -47,6 +49,8 @@
     
     [UserApi checkCredentialsForId:uuid completion:^(BOOL success) {
         _connected = success;
+        _identityToken = token;
+        _uuid = uuid;
         
         if (success)
         {
@@ -71,6 +75,11 @@
             if (completion) completion(NO);
         }
     }];
+}
+
++ (NSDate *)parseServerDate:(NSString *)date
+{
+    return [[[self sharedClient] dateFormatter] dateFromString:date];
 }
 
 @end

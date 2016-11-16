@@ -25,6 +25,9 @@
     ],
     "SlackTextViewController": [
       "1.9.5"
+    ],
+    "DateTools": [
+
     ]
   }
 }

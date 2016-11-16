@@ -14,5 +14,6 @@
 
 + (void)allConversationsWithCompletion:(void (^)(BOOL success, NSArray<Conversation *> *conversations))completion;
 + (void)loadMessagesForConversation:(NSString *)conversationId completion:(void (^)(BOOL success, NSArray<Message *> *messages))completion;
++ (void)sendMessage:(NSString *)text conversation:(NSString *)conversationId completion:(void (^)(BOOL success, Message *message))completion;
 
 @end

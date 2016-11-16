@@ -47,7 +47,8 @@
     Message *message = [[self.conversation messages] objectAtIndex:indexPath.row];
     
     [cell.messageTextLabel setText:[message text]];
-    [cell.nameLabel setText:[message senderName]];
+    [cell.nameLabel setText:[message senderFirstName]];
+    
     
     cell.transform = self.tableView.transform;
     
@@ -63,5 +64,23 @@
 {
     return 1;
 }
+-(void)didPressRightButton:(id)sender
+{
+    NSString *text = [self.textView.text copy];
+    NSLog(@"Sending message: %@", text);
+    
+    [ConversationApi sendMessage:text conversation:self.conversation._id completion:^(BOOL success, Message *message) {
+        if (success) {
+            [self.conversation.messages insertObject:message atIndex:0];
+            [self.conversation setLastMessage:message];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+                [super didPressRightButton:sender];
+            });
+        }
+        
+    }];
+}
+
 
 @end

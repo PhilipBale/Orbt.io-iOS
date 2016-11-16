@@ -12,7 +12,9 @@
 
 @property(nonatomic, strong) NSString *_id;
 @property(nonatomic, strong) NSString *text;
-@property(nonatomic, strong) NSString *senderName;
+@property(nonatomic, strong) NSString *senderFirstName;
+@property(nonatomic, strong) NSString *senderLastName;
+@property(nonatomic, strong) NSDate *timestamp;
 
 + (Message *)messageFromDictionary:(NSDictionary *)dictionary;
 

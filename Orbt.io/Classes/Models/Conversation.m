@@ -7,6 +7,7 @@
 //
 
 #import "Conversation.h"
+#import "ORBTClient.h"
 
 @implementation Conversation
 
@@ -21,8 +22,25 @@
 
 + (Conversation *)conversationFromDictionary:(NSDictionary *)dictionary
 {
+    NSString *userUuid = [[ORBTClient sharedClient] uuid];
+    
     Conversation *conversation = [[Conversation alloc] init];
     conversation._id = [dictionary objectForKey:@"_id"];
+    conversation.lastMessage = [Message messageFromDictionary:[dictionary objectForKey:@"lastMessage"]];
+    
+    NSMutableArray<NSString *> *users = [[NSMutableArray alloc] init];
+    for (NSDictionary *user in [dictionary objectForKey:@"users"]) {
+        if ([[user objectForKey:@"uuid"] isEqualToString:userUuid]) continue;
+        
+        NSString *firstName = [user objectForKey:@"firstName"];
+        if (![firstName length]) {
+            firstName = [user objectForKey:@"uuid"];
+        }
+        
+        [users addObject:firstName];
+    }
+    
+    conversation.participants = users;
     
     return conversation;
 }

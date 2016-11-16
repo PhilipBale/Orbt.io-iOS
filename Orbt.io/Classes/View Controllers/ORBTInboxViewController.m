@@ -10,6 +10,7 @@
 #import "ConversationCell.h"
 #import "ORBTClient.h"
 #import "ORBTConversationViewController.h"
+#import "NSDate+DateTools.h"
 
 @interface ORBTInboxViewController ()
 
@@ -39,11 +40,19 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+
 -(UITableViewCell *) tableView: (UITableView *)tableVw cellForRowAtIndexPath: (NSIndexPath *)indexPath {
     ConversationCell *cell = [tableVw dequeueReusableCellWithIdentifier:@"ConversationCell" forIndexPath: indexPath];
     Conversation *conversation = [[[ORBTClient sharedClient] conversations] objectAtIndex:indexPath.row];
     
-    [cell.titleLabel setText:[NSString stringWithFormat:@"hey %@", [conversation _id]]];
+    [cell.titleLabel setText:[[conversation participants] componentsJoinedByString:@", "]];
+    [cell.lastMessageLabel setText:[[conversation lastMessage] text]];
+    [cell.dateLabel setText:[[[conversation lastMessage] timestamp] shortTimeAgoSinceNow]];
     
     return cell;
 }

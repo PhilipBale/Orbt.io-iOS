@@ -19,5 +19,6 @@
 static NSString * const kApiPathAllConversations = API_PATH(conversations);
 static NSString * const kApiPathMessagesForConversation = API_PATH(conversations);
 static NSString * const kApiPathCheckCredentials = API_PATH(users);
+static NSString * const kApiPathSendMessage = API_PATH(messages);
 
 #endif /* HTTPPaths_h */

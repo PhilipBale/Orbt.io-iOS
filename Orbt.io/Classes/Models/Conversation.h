@@ -13,7 +13,9 @@
 
 @property (nonatomic, strong) NSString *_id;
 
+@property (nonatomic, strong) NSArray<NSString *> *participants;
 @property (nonatomic, strong) NSMutableArray<Message *> *messages;
+@property (nonatomic, strong) Message *lastMessage;
 
 + (Conversation *)conversationFromDictionary:(NSDictionary *)dictionary;
 
