@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -30,21 +29,34 @@
                                             <frame key="frameInset" width="375" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1q-0C-h0H">
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HnY-Ct-MCl">
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1q-0C-h0H">
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="c1q-0C-h0H" secondAttribute="height" multiplier="1:1" id="ZAo-az-2eW"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="50d-Qy-R0H">
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-am-ayt">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Last Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NQ-kO-bVE">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                    <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="c1q-0C-h0H" secondAttribute="height" multiplier="1:1" id="ZAo-az-2eW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="50d-Qy-R0H" secondAttribute="bottom" id="4mh-nf-RZz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="50d-Qy-R0H" secondAttribute="trailing" id="tdh-rz-MNK"/>
+                                                        <constraint firstItem="50d-Qy-R0H" firstAttribute="top" secondItem="HnY-Ct-MCl" secondAttribute="top" id="whJ-rV-rmn"/>
                                                     </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-am-ayt">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NQ-kO-bVE">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-81-nje">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="9kR-Rz-FgZ"/>
@@ -55,23 +67,19 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9NQ-kO-bVE" firstAttribute="leading" secondItem="bXi-am-ayt" secondAttribute="leading" id="8Kb-Kb-3iZ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="1h4-81-nje" secondAttribute="trailing" id="B6G-cN-NsM"/>
-                                                <constraint firstItem="9NQ-kO-bVE" firstAttribute="top" secondItem="bXi-am-ayt" secondAttribute="bottom" constant="1" id="Lcl-38-7j8"/>
-                                                <constraint firstItem="bXi-am-ayt" firstAttribute="top" secondItem="c1q-0C-h0H" secondAttribute="top" id="N9w-go-DEI"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="c1q-0C-h0H" secondAttribute="bottom" id="RhF-ze-8GI"/>
-                                                <constraint firstItem="1h4-81-nje" firstAttribute="leading" secondItem="bXi-am-ayt" secondAttribute="trailing" constant="3" id="SQG-dC-ZRJ"/>
-                                                <constraint firstItem="9NQ-kO-bVE" firstAttribute="trailing" secondItem="bXi-am-ayt" secondAttribute="trailing" id="UDY-93-MsL"/>
-                                                <constraint firstItem="c1q-0C-h0H" firstAttribute="leading" secondItem="0ys-Hc-8xZ" secondAttribute="leadingMargin" id="WAv-96-jdX"/>
-                                                <constraint firstItem="c1q-0C-h0H" firstAttribute="top" secondItem="0ys-Hc-8xZ" secondAttribute="topMargin" id="hfl-Hi-Ih1"/>
-                                                <constraint firstItem="bXi-am-ayt" firstAttribute="leading" secondItem="c1q-0C-h0H" secondAttribute="trailing" constant="8" id="sDy-gi-OZ0"/>
-                                                <constraint firstItem="1h4-81-nje" firstAttribute="centerY" secondItem="bXi-am-ayt" secondAttribute="centerY" id="zvk-NY-lIR"/>
+                                                <constraint firstItem="HnY-Ct-MCl" firstAttribute="top" secondItem="0ys-Hc-8xZ" secondAttribute="topMargin" id="Dxe-GS-Wyp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HnY-Ct-MCl" secondAttribute="bottom" id="IDy-RZ-CT0"/>
+                                                <constraint firstItem="1h4-81-nje" firstAttribute="top" secondItem="HnY-Ct-MCl" secondAttribute="top" id="XJY-8o-cCX"/>
+                                                <constraint firstItem="1h4-81-nje" firstAttribute="leading" secondItem="HnY-Ct-MCl" secondAttribute="trailing" id="hhJ-Cs-ZoK"/>
+                                                <constraint firstItem="HnY-Ct-MCl" firstAttribute="leading" secondItem="0ys-Hc-8xZ" secondAttribute="leadingMargin" constant="10" id="qo8-z7-1LA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatarImageView" destination="c1q-0C-h0H" id="0pJ-mu-uhv"/>
                                             <outlet property="dateLabel" destination="1h4-81-nje" id="oC9-3M-zMo"/>
                                             <outlet property="lastMessageLabel" destination="9NQ-kO-bVE" id="3H6-OR-NdX"/>
+                                            <outlet property="ratioConstraint" destination="ZAo-az-2eW" id="s6L-nh-Hqy"/>
                                             <outlet property="titleLabel" destination="bXi-am-ayt" id="lye-8i-D54"/>
                                         </connections>
                                     </tableViewCell>

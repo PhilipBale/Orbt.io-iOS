@@ -54,6 +54,13 @@
     [cell.lastMessageLabel setText:[[conversation lastMessage] text]];
     [cell.dateLabel setText:[[[conversation lastMessage] timestamp] shortTimeAgoSinceNow]];
     
+    if ([[conversation avatarUrl] length]) {
+        [cell.avatarImageView setHidden:NO];
+    } else {
+        // hide image
+        [cell.avatarImageView setHidden:YES];
+    }
+    
     return cell;
 }
 

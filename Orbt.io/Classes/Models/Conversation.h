@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSArray<NSString *> *participants;
 @property (nonatomic, strong) NSMutableArray<Message *> *messages;
 @property (nonatomic, strong) Message *lastMessage;
+@property (nonatomic, strong) NSString *avatarUrl;
 
 + (Conversation *)conversationFromDictionary:(NSDictionary *)dictionary;
 

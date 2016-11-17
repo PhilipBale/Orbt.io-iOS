@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastMessageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
+@property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *avatarConstraint;
+@property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *ratioConstraint;
+
 + (NSInteger)height;
 
 @end
