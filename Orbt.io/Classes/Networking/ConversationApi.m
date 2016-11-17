@@ -20,6 +20,15 @@
          {
              [conversationObjects addObject:[Conversation conversationFromDictionary:conversationDictionary]];
          }
+         
+         conversationObjects = [[conversationObjects sortedArrayUsingComparator:
+                            ^(id obj1, id obj2) {
+                                Conversation *conversation1 = obj1;
+                                Conversation *conversation2 = obj2;
+                                return [[[conversation2 lastMessage] timestamp] compare:[[conversation1 lastMessage] timestamp]];
+                            }] mutableCopy];
+
+                                
          if (completion) completion(YES, conversationObjects);
      } failure:^(NSError *error) {
          if (completion) completion(NO, nil);

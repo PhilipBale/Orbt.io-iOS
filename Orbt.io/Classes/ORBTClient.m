@@ -74,7 +74,7 @@ static NSString * const kOrbtBackendPath = @"http://localhost:3020";
 
 - (void)setupSocketWithUUID:(NSString *)uuid identityToken:(NSString *)token
 {
-    SocketIOClient *socket = [[SocketIOClient alloc] initWithSocketURL:[NSURL URLWithString:kOrbtBackendPath] config:@{@"log": @YES, @"forcePolling": @YES, @"connectParams":@{@"uuid":uuid, @"appId":self.appId, @"userToken":token}}];
+    SocketIOClient *socket = [[SocketIOClient alloc] initWithSocketURL:[NSURL URLWithString:kOrbtBackendPath] config:@{@"log": @NO, @"forcePolling": @YES, @"connectParams":@{@"uuid":uuid, @"appId":self.appId, @"userToken":token}}];
     
     [socket on:@"connect" callback:^(NSArray * data, SocketAckEmitter * ack) {
         NSLog(@"[ORBTClientSocket] Connected");
@@ -89,6 +89,7 @@ static NSString * const kOrbtBackendPath = @"http://localhost:3020";
         NSDictionary *messageData = [[[data objectAtIndex:0] objectForKey:@"data"] objectForKey:@"message"];
         Message *message = [Message messageFromDictionary:messageData];
         
+        Conversation *conversationRefreshed = nil;
         for (Conversation *conversation in self.conversations) {
             if ([[conversation _id] isEqualToString:[message conversationId]]) {
                 [conversation setLastMessage:message];
@@ -96,15 +97,28 @@ static NSString * const kOrbtBackendPath = @"http://localhost:3020";
                 
                 if ([self.orbtInboxDelegate respondsToSelector:@selector(newMessage)]) [self.orbtInboxDelegate newMessage];
                 if ([self.orbtConversationDelegate respondsToSelector:@selector(newMessage)]) [self.orbtConversationDelegate newMessage];
+                
+                conversationRefreshed = conversation;
+                
                 break;
             }
         }
         
+        if (conversationRefreshed) {
+            [self.conversations removeObject:conversationRefreshed];
+            [self.conversations insertObject:conversationRefreshed atIndex:0];
+        }
         
     }];
     
     [socket on:@"newConversation" callback:^(NSArray * data, SocketAckEmitter * ack) {
         NSLog(@"[ORBTClient] New conversation");
+        NSDictionary *conversationData = [[[data objectAtIndex:0] objectForKey:@"data"] objectForKey:@"conversation"];
+        Conversation *conversation = [Conversation conversationFromDictionary:conversationData];
+        [self.conversations insertObject:conversation atIndex:0];
+        
+        if ([self.orbtInboxDelegate respondsToSelector:@selector(newConversation)]) [self.orbtInboxDelegate newConversation];
+        if ([self.orbtConversationDelegate respondsToSelector:@selector(newConversation)]) [self.orbtConversationDelegate newConversation];
     }];
     
     [socket connect];

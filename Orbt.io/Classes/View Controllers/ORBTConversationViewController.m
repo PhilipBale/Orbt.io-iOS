@@ -74,6 +74,12 @@
         if (success) {
             [self.conversation.messages insertObject:message atIndex:0];
             [self.conversation setLastMessage:message];
+            
+            // Move conversation to front
+            [[[ORBTClient sharedClient] conversations] removeObject:self.conversation];
+            [[[ORBTClient sharedClient] conversations] insertObject:self.conversation atIndex:0];
+            
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
                 [super didPressRightButton:sender];
