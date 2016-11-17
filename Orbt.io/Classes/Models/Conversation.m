@@ -41,6 +41,7 @@
     }
     
     conversation.participants = users;
+    conversation.messages = [[NSMutableArray alloc] init];
     
     return conversation;
 }

@@ -9,7 +9,7 @@
 #ifndef HTTPPaths_h
 #define HTTPPaths_h
 
-#define BASE_API_URL @"http://orbt.io"
+#define BASE_API_URL @"http://localhost:3020"
 
 #define API_PATH(PATH) (BASE_API_URL @"/" #PATH)
 

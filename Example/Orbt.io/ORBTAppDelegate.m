@@ -13,10 +13,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [ORBTClient setAppId:@"58277dfa2714b5342634d011"];
+    NSString *appId = @"58277dfa2714b5342634d011";
+    NSString *uuid = @"test@test.com";
+    NSString *identityToken = @"a21d79087496c9003946c906edc3f85d31ea4f6d";
+    
+    BOOL debug = YES;
+    if (debug) {
+        appId = @"57e30e9a835d3724b8094aa3";
+        identityToken = @"f3b4fea25583a58294f82ade0312afcd30f21d9a";
+    }
+    
+    
+    [ORBTClient setAppId:appId];
+    
     
     ORBTClient *client = [ORBTClient sharedClient];
-    [client connectWithUUID:@"test@test.com" identityToken:@"a21d79087496c9003946c906edc3f85d31ea4f6d" completion:^(BOOL success) {
+    [client connectWithUUID:uuid identityToken:identityToken completion:^(BOOL success) {
         NSLog(@"Connected");
     }];
     // Override point for customization after application launch.

@@ -25,7 +25,9 @@ PODS:
     - AFNetworking (= 2.6.3)
     - DateTools
     - SlackTextViewController (= 1.9.5)
+    - Socket.IO-Client-Swift (~> 8.1.2)
   - SlackTextViewController (1.9.5)
+  - Socket.IO-Client-Swift (8.1.2)
 
 DEPENDENCIES:
   - Orbt.io (from `../`)
@@ -37,8 +39,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
-  Orbt.io: bef7e4236fcbd3bd14285436520a059e305303bb
+  Orbt.io: d0acf0d22d5f86e4ae31d2547a10dd883e7f6a45
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
+  Socket.IO-Client-Swift: 542d82e6708f9901b3f6c1d134fb60fa0d09d4d1
 
 PODFILE CHECKSUM: b25d10af968b22de341736e938ee84158f550ef7
 

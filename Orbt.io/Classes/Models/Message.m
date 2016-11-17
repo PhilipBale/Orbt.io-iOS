@@ -17,6 +17,7 @@
     
     Message *message = [[Message alloc] init];
     message._id = [dictionary objectForKey:@"_id"];
+    message.conversationId = [dictionary objectForKey:@"conversation"];
     message.text = [dictionary objectForKey:@"text"];
     message.senderFirstName = [[dictionary objectForKey:@"sender"] objectForKey:@"firstName"];
     message.senderLastName = [[dictionary objectForKey:@"sender"] objectForKey:@"lastName"];

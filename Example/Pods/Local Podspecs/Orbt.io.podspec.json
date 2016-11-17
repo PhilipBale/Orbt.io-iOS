@@ -28,6 +28,9 @@
     ],
     "DateTools": [
 
+    ],
+    "Socket.IO-Client-Swift": [
+      "~> 8.1.2"
     ]
   }
 }

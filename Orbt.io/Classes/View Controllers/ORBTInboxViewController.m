@@ -25,6 +25,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    [[ORBTClient sharedClient] setOrbtInboxDelegate:self];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [[ORBTClient sharedClient] loadConversationsWithCompletion:^(BOOL success) {
             if (success) {
@@ -46,7 +48,7 @@
     [self.tableView reloadData];
 }
 
--(UITableViewCell *) tableView: (UITableView *)tableVw cellForRowAtIndexPath: (NSIndexPath *)indexPath {
+- (UITableViewCell *) tableView: (UITableView *)tableVw cellForRowAtIndexPath: (NSIndexPath *)indexPath {
     ConversationCell *cell = [tableVw dequeueReusableCellWithIdentifier:@"ConversationCell" forIndexPath: indexPath];
     Conversation *conversation = [[[ORBTClient sharedClient] conversations] objectAtIndex:indexPath.row];
     
@@ -64,7 +66,7 @@
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Conversation *conversation = [[[ORBTClient sharedClient] conversations] objectAtIndex:indexPath.row];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Messenger" bundle:[NSBundle bundleForClass:[self class]]];
@@ -75,19 +77,32 @@
 
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [[[ORBTClient sharedClient] conversations] count];
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [ConversationCell height];
 }
+
+- (void)newMessage
+{
+    [self newConversation];
+}
+
+- (void)newConversation
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+}
+
 
 @end

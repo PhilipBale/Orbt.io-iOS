@@ -88,10 +88,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/DateTools/DateTools.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Orbt.io/Orbt_io.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SlackTextViewController/SlackTextViewController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Socket.IO-Client-Swift/SocketIO.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DateTools/DateTools.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Orbt.io/Orbt_io.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SlackTextViewController/SlackTextViewController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Socket.IO-Client-Swift/SocketIO.framework"
 fi

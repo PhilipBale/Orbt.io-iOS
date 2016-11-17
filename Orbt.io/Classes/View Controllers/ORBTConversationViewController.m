@@ -7,7 +7,6 @@
 //
 
 #import "ORBTConversationViewController.h"
-#import "ORBTClient.h"
 #import "MessageCell.h"
 #import "Message.h"
 #import "ConversationApi.h"
@@ -26,6 +25,8 @@
     [self.tableView setRowHeight:UITableViewAutomaticDimension];
     [self.tableView setEstimatedRowHeight:50.0];
     self.inverted = YES;
+    
+    [[ORBTClient sharedClient] setOrbtConversationDelegate:self];
     
     [ConversationApi loadMessagesForConversation:[[self conversation] _id] completion:^(BOOL success, NSArray<Message *> *messages) {
         if (success) {
@@ -80,6 +81,13 @@
         }
         
     }];
+}
+
+- (void)newMessage
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 

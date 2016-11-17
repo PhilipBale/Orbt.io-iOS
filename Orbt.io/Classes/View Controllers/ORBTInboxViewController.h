@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ORBTClient.h"
 
-@interface ORBTInboxViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface ORBTInboxViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, ORBTClientDelegate>
 
 @end

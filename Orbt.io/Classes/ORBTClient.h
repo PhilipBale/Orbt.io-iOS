@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "Conversation.h"
 
+@protocol ORBTClientDelegate <NSObject>
+
+- (void)newConversation;
+- (void)newMessage;
+
+@end
+
+
 @interface ORBTClient : NSObject
 
 @property (nonatomic, strong) NSString *appId;
@@ -24,5 +32,8 @@
 
 - (void)connectWithUUID:(NSString *)uuid identityToken:(NSString *)token completion:(void (^)(BOOL success))completion;
 - (void)loadConversationsWithCompletion:(void (^)(BOOL))completion;
+
+@property (strong, nonatomic) id<ORBTClientDelegate> orbtInboxDelegate;
+@property (strong, nonatomic) id<ORBTClientDelegate> orbtConversationDelegate;
 
 @end
