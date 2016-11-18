@@ -13,7 +13,7 @@
 
 @import SocketIO;
 
-static NSString * const kOrbtBackendPath = @"http://localhost:3020";
+static NSString * const kOrbtBackendPath = @"http://backend.orbt.io";
 
 @interface ORBTClient ()
 
