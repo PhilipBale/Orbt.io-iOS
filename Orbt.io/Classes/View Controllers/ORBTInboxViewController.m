@@ -77,7 +77,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Conversation *conversation = [[[ORBTClient sharedClient] conversations] objectAtIndex:indexPath.row];
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Messenger" bundle:[NSBundle bundleForClass:[self class]]];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Messenger" bundle:[NSBundle bundleForClass:[ORBTInboxViewController class]]];
     ORBTConversationViewController *conversationVC = [sb instantiateViewControllerWithIdentifier:@"ConversationVC"];
     [conversationVC setConversation:conversation];
     

@@ -32,9 +32,7 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Orbt.io/Classes/**/*'
 
-  s.resource_bundles = {
-    'Orbt.io' => ['Orbt.io/Assets/*.{lproj,storyboard}']
-  }
+  s.resources = 'Orbt.io/Assets/*'
   
   # s.resource_bundles = {
   #   'Orbt.io' => ['Orbt.io/Assets/*.png']

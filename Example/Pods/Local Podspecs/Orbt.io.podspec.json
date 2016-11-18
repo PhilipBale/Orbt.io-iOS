@@ -19,11 +19,7 @@
     "ios": "9.0"
   },
   "source_files": "Orbt.io/Classes/**/*",
-  "resource_bundles": {
-    "Orbt.io": [
-      "Orbt.io/Assets/*.{lproj,storyboard}"
-    ]
-  },
+  "resources": "Orbt.io/Assets/*",
   "dependencies": {
     "AFNetworking": [
       "2.6.3"
