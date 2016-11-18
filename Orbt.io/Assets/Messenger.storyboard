@@ -85,17 +85,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1O-zl-z3E">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="M1O-zl-z3E" secondAttribute="trailing" id="0dK-mN-Ef5"/>
                             <constraint firstItem="H3B-Na-nKB" firstAttribute="leading" secondItem="aWf-cr-m3q" secondAttribute="leading" id="0p4-pG-NHa"/>
                             <constraint firstItem="IL7-am-zHg" firstAttribute="top" secondItem="H3B-Na-nKB" secondAttribute="bottom" id="Gtm-4K-TEa"/>
                             <constraint firstItem="H3B-Na-nKB" firstAttribute="top" secondItem="axJ-Ky-52d" secondAttribute="bottom" id="Lv5-lP-Xxy"/>
+                            <constraint firstItem="M1O-zl-z3E" firstAttribute="leading" secondItem="aWf-cr-m3q" secondAttribute="leadingMargin" id="UBt-8g-gcp"/>
+                            <constraint firstItem="M1O-zl-z3E" firstAttribute="centerY" secondItem="aWf-cr-m3q" secondAttribute="centerY" id="hxV-ve-y9b"/>
                             <constraint firstAttribute="trailing" secondItem="H3B-Na-nKB" secondAttribute="trailing" id="txk-01-LUf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="A14-iT-9B7"/>
                     <connections>
+                        <outlet property="emptyConversationsLabel" destination="M1O-zl-z3E" id="yTC-pT-tzy"/>
                         <outlet property="tableView" destination="H3B-Na-nKB" id="2Mv-71-mQu"/>
                     </connections>
                 </viewController>

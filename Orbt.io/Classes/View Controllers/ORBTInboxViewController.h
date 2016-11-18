@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "ORBTClient.h"
 
-@interface ORBTInboxViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, ORBTClientDelegate>
+@interface ORBTInboxViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource, ORBTClientDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *emptyConversationsLabel;
 
 @end

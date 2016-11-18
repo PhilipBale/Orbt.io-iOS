@@ -13,6 +13,10 @@
 
 @interface ORBTConversationViewController ()
 
+@property (nonatomic) UIView *spinnerView;
+@property (nonatomic) UIActivityIndicatorView *spinner;
+
+
 @end
 
 
@@ -26,11 +30,18 @@
     [self.tableView setEstimatedRowHeight:50.0];
     self.inverted = YES;
     
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     [[ORBTClient sharedClient] setOrbtConversationDelegate:self];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self showSpinner];
+    });
     
     [ConversationApi loadMessagesForConversation:[[self conversation] _id] completion:^(BOOL success, NSArray<Message *> *messages) {
         if (success) {
             dispatch_async(dispatch_get_main_queue(), ^{
+                [self hideSpinner];
                 [self.conversation setMessages:messages];
                 [self.tableView reloadData];
                 
@@ -94,6 +105,34 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
     });
+}
+
+- (void)showSpinner {
+    self.spinnerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    self.spinnerView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+    
+    self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    self.spinner.center = self.spinnerView.center;
+    
+    [self.spinnerView addSubview:self.spinner];
+    [self.view addSubview:self.spinnerView];
+    
+    __weak ORBTConversationViewController *weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [weakSelf.spinner startAnimating];
+    });
+}
+
+- (void)hideSpinner {
+    if (self.spinner != nil) {
+        __weak ORBTConversationViewController *weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.spinner stopAnimating];
+            [weakSelf.spinnerView removeFromSuperview];
+            weakSelf.spinner = nil;
+            weakSelf.spinnerView = nil;
+        });
+    }
 }
 
 

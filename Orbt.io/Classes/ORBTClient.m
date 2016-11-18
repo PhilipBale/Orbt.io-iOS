@@ -50,6 +50,7 @@ static NSString * const kOrbtBackendPath = @"http://localhost:3020";
 
 - (void)connectWithUUID:(NSString *)uuid identityToken:(NSString *)token completion:(void (^)(BOOL))completion
 {
+    [self disconnect];
     NSLog(@"[ORBTClient] Connecting to ORBT backend");
     [HTTPManager setRequestHeadersForAppId:[self appId] uuid:uuid identityToken:token];
     
@@ -70,6 +71,18 @@ static NSString * const kOrbtBackendPath = @"http://localhost:3020";
             if (completion) completion(NO);
         }
     }];
+}
+
+- (void)disconnect
+{
+    NSLog(@"[ORBTClient] Disconnecting any prior authenticated accounts");
+    [self.socket disconnect];
+    self.socket = nil;
+    
+    [HTTPManager setRequestHeadersForAppId:@"" uuid:@"" identityToken:@""];
+    _connected = NO;
+    _identityToken = nil;
+    _uuid = nil;
 }
 
 - (void)setupSocketWithUUID:(NSString *)uuid identityToken:(NSString *)token

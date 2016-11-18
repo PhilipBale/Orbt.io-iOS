@@ -26,11 +26,19 @@
     self.tableView.dataSource = self;
     
     [[ORBTClient sharedClient] setOrbtInboxDelegate:self];
+
+
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        [self showSpinner];
+        [self.tableView reloadData];
+        
         [[ORBTClient sharedClient] loadConversationsWithCompletion:^(BOOL success) {
             if (success) {
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    [self hideSpinner];
                     [self.tableView reloadData];
                 });
             }
@@ -84,7 +92,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[ORBTClient sharedClient] conversations] count];
+    NSInteger conversationCount = [[[ORBTClient sharedClient] conversations] count];
+    [self.emptyConversationsLabel setHidden:(conversationCount > 0)];
+    
+    return conversationCount;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -10,6 +10,7 @@
 #import "UserApi.h"
 #import "ORBTClient.h"
 #import "ORBTViewController.h"
+#import "BaseViewController.h"
 #import "ORBTConversationViewController.h"
 #import "ORBTInboxViewController.h"
 #import "ConversationCell.h"

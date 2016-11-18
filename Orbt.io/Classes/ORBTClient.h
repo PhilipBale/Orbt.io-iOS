@@ -31,6 +31,7 @@
 + (NSDate *)parseServerDate:(NSString *)date;
 
 - (void)connectWithUUID:(NSString *)uuid identityToken:(NSString *)token completion:(void (^)(BOOL success))completion;
+- (void)disconnect;
 - (void)loadConversationsWithCompletion:(void (^)(BOOL))completion;
 
 @property (strong, nonatomic) id<ORBTClientDelegate> orbtInboxDelegate;

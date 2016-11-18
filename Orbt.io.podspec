@@ -31,6 +31,10 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Orbt.io/Classes/**/*'
+
+  s.resource_bundles = {
+    'Orbt.io' => ['Orbt.io/Assets/*.{lproj,storyboard}']
+  }
   
   # s.resource_bundles = {
   #   'Orbt.io' => ['Orbt.io/Assets/*.png']
