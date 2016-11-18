@@ -13,7 +13,7 @@
 
 + (Message *)messageFromDictionary:(NSDictionary *)dictionary
 {
-    if (!dictionary) return nil;
+    if (!dictionary || dictionary == [NSNull null]) return nil;
     
     Message *message = [[Message alloc] init];
     message._id = [dictionary objectForKey:@"_id"];

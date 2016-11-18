@@ -22,7 +22,7 @@
 
 + (Conversation *)conversationFromDictionary:(NSDictionary *)dictionary
 {
-    if (!dictionary) return nil;
+    if (!dictionary || dictionary == [NSNull null]) return nil;
     
     NSString *userUuid = [[ORBTClient sharedClient] uuid];
     
