@@ -18,7 +18,8 @@
          
          for (NSDictionary *conversationDictionary in responseObject)
          {
-             [conversationObjects addObject:[Conversation conversationFromDictionary:conversationDictionary]];
+             Conversation *conversation =[Conversation conversationFromDictionary:conversationDictionary];
+             if (conversation) [conversationObjects addObject:conversation];
          }
          
          conversationObjects = [[conversationObjects sortedArrayUsingComparator:
@@ -43,9 +44,9 @@
          
          for (NSDictionary *messageDictionary in responseObject)
          {
-             [messageObjects addObject:[Message messageFromDictionary:messageDictionary]];
+             Message *message = [Message messageFromDictionary:messageDictionary];
+             if (message) [messageObjects addObject:message];
          }
-         
          
          messageObjects = [[messageObjects sortedArrayUsingComparator:
                             ^(id obj1, id obj2) {

@@ -22,6 +22,8 @@
 
 + (Conversation *)conversationFromDictionary:(NSDictionary *)dictionary
 {
+    if (!dictionary) return nil;
+    
     NSString *userUuid = [[ORBTClient sharedClient] uuid];
     
     Conversation *conversation = [[Conversation alloc] init];
