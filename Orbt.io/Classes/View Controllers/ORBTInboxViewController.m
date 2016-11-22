@@ -11,6 +11,7 @@
 #import "ORBTClient.h"
 #import "ORBTConversationViewController.h"
 #import "NSDate+DateTools.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ORBTInboxViewController ()
 
@@ -66,6 +67,7 @@
     
     if ([[conversation avatarUrl] length]) {
         [cell.avatarImageView setHidden:NO];
+        [cell.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[conversation avatarUrl]]];
     } else {
         // hide image
         [cell.avatarImageView setHidden:YES];

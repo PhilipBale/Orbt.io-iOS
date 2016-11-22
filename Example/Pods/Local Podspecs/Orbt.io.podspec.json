@@ -32,6 +32,9 @@
     ],
     "Socket.IO-Client-Swift": [
       "~> 8.1.2"
+    ],
+    "SDWebImage": [
+      "3.7.6"
     ]
   }
 }

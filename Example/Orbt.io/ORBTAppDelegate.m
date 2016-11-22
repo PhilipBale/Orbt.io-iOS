@@ -17,7 +17,7 @@
     NSString *uuid = @"test@test.com";
     NSString *identityToken = @"a21d79087496c9003946c906edc3f85d31ea4f6d";
     
-    BOOL debug = YES;
+    BOOL debug = NO;
     if (debug) {
         appId = @"57e30e9a835d3724b8094aa3";
         identityToken = @"f3b4fea25583a58294f82ade0312afcd30f21d9a";

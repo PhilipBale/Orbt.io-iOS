@@ -24,8 +24,12 @@ PODS:
   - Orbt.io (0.1.0):
     - AFNetworking (= 2.6.3)
     - DateTools
+    - SDWebImage (= 3.7.6)
     - SlackTextViewController (= 1.9.5)
     - Socket.IO-Client-Swift (~> 8.1.2)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
   - SlackTextViewController (1.9.5)
   - Socket.IO-Client-Swift (8.1.2)
 
@@ -39,7 +43,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
-  Orbt.io: 684e7da63b5c73f8b76afb9c0b5620eaf917c992
+  Orbt.io: bb5f5f64dc77f8d756e747ab528a37cc0c161995
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
   Socket.IO-Client-Swift: 542d82e6708f9901b3f6c1d134fb60fa0d09d4d1
 

@@ -39,6 +39,10 @@
             firstName = [user objectForKey:@"uuid"];
         }
         
+        if ([user objectForKey:@"avatarUrl"] && [user objectForKey:@"avatarUrl"] != [NSNull null]) {
+            [conversation setAvatarUrl:[user objectForKey:@"avatarUrl"]];
+        }
+        
         [users addObject:firstName];
     }
     
