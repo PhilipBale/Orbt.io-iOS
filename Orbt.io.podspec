@@ -43,7 +43,7 @@ TODO: Add long description of the pod here.
   s.dependency 'AFNetworking', '2.6.3'
   s.dependency 'SlackTextViewController', '1.9.5'
   s.dependency 'DateTools'
-  s.dependency 'Socket.IO-Client-Swift', '~> 8.1.2'
+  s.dependency 'Socket.IO-Client-Swift', '8.1.1'
   s.dependency 'SDWebImage', '3.7.6'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
